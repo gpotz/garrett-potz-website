@@ -1,0 +1,15 @@
+# Build artifacts / bundles
+*.zip
+
+# Notes & docs that should not deploy to the live site
+journal.txt
+*-transcript.txt
+SETUP.md
+
+# The Google Apps Script review tool is a separate project, not the website
+review-request-tool/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+node_modules/
