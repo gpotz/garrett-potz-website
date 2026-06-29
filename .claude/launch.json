@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Static File Server",
+      "runtimeExecutable": "G:\\Shared drives\\PRODUCTION-LO-Garrett-Potz\\Marketing\\garrett-potz-website\\.claude\\serve.bat",
+      "runtimeArgs": [],
+      "port": 3000
+    }
+  ]
+}

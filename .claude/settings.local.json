@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python --version 2>&1)",
+      "PowerShell(node --version 2>&1)",
+      "PowerShell(npm --version 2>&1)",
+      "PowerShell(python3 --version 2>&1)",
+      "PowerShell(php --version 2>&1)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue; ls \"C:\\\\Program Files\\\\nodejs\" -ErrorAction SilentlyContinue; ls \"$env:APPDATA\\\\npm\" -ErrorAction SilentlyContinue)",
+      "PowerShell([System.Environment]::SetEnvironmentVariable\\(\"PATH\", $env:PATH + \";C:\\\\Program Files\\\\nodejs\", [System.EnvironmentVariableTarget]::User\\))",
+      "PowerShell(if \\(!\\(Test-Path \"G:\\\\Shared drives\\\\PRODUCTION-LO-Garrett-Potz\\\\Marketing\\\\garrett-potz-website\\\\.claude\"\\)\\) { New-Item -ItemType Directory -Path \"G:\\\\Shared drives\\\\PRODUCTION-LO-Garrett-Potz\\\\Marketing\\\\garrett-potz-website\\\\.claude\" })",
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" install -g serve)",
+      "PowerShell(Get-Command serve -ErrorAction SilentlyContinue)",
+      "PowerShell(Rename-Item \"G:\\\\Shared drives\\\\PRODUCTION-LO-Garrett-Potz\\\\Marketing\\\\garrett-potz-website\\\\affinity-logo.png.png\" \"affinity-logo.png\")"
+    ]
+  }
+}
