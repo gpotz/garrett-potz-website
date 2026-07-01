@@ -308,7 +308,7 @@ footer ul a:hover{color:#fff}
           </div>
           <div>
             <h3>Temporary Buydown Calculator</h3>
-            <p>Show sellers and buyers what a 2-1 or 1-0 buydown actually saves</p>
+            <p>Show sellers and buyers what a 3-2-1, 2-1, or 1-0 buydown actually saves</p>
           </div>
         </div>
         <div class="tool-body">
@@ -316,7 +316,7 @@ footer ul a:hover{color:#fff}
             <div class="field"><label>Purchase Price</label><div class="prefix"><input type="number" id="bd-price" value="450000" min="50000" step="5000"></div></div>
             <div class="field"><label>Down Payment %</label><div class="suffix"><input type="number" id="bd-down" value="10" min="0" max="100" step=".5"></div></div>
             <div class="field"><label>Note Rate (full rate)</label><div class="suffix"><input type="number" id="bd-rate" value="7.25" min="1" max="20" step=".125"></div></div>
-            <div class="field"><label>Buydown Type</label><select id="bd-type"><option value="21">2-1 Buydown</option><option value="10">1-0 Buydown</option></select></div>
+            <div class="field"><label>Buydown Type</label><select id="bd-type"><option value="321">3-2-1 Buydown</option><option value="21">2-1 Buydown</option><option value="10">1-0 Buydown</option></select></div>
           </div>
           <button class="calc-btn" onclick="calcBuydown()">Calculate Buydown</button>
           <div class="results" id="bd-results">
@@ -525,22 +525,34 @@ function calcBuydown(){
   const n=360;
 
   const fullPmt=pmt(noteRate/12,n,loan);
-  const rate1=noteRate-(type==='21'?0.02:0.01);
-  const rate2=noteRate-0.01;
-  const pmt1=pmt(rate1/12,n,loan);
-  const pmt2=pmt(rate2/12,n,loan);
-  const save1=fullPmt-pmt1;
-  const save2=fullPmt-pmt2;
-  const costEst=type==='21'?(save1*12+save2*12):(save1*12);
 
   let html='';
-  if(type==='21'){
-    html+=`<div class="by-card"><div class="by-yr">Year 1</div><div class="by-rate">${(noteRate*100-2).toFixed(2)}%</div><div class="by-pmt">${fmt(pmt1)}/mo</div><div class="by-save">saves ${fmt(save1)}/mo</div></div>`;
-    html+=`<div class="by-card"><div class="by-yr">Year 2</div><div class="by-rate">${(noteRate*100-1).toFixed(2)}%</div><div class="by-pmt">${fmt(pmt2)}/mo</div><div class="by-save">saves ${fmt(save2)}/mo</div></div>`;
+  let costEst=0;
+
+  if(type==='321'){
+    const r1=noteRate-0.03, r2=noteRate-0.02, r3=noteRate-0.01;
+    const p1=pmt(r1/12,n,loan), p2=pmt(r2/12,n,loan), p3=pmt(r3/12,n,loan);
+    const s1=fullPmt-p1, s2=fullPmt-p2, s3=fullPmt-p3;
+    costEst=s1*12+s2*12+s3*12;
+    html+=`<div class="by-card"><div class="by-yr">Year 1</div><div class="by-rate">${(noteRate*100-3).toFixed(2)}%</div><div class="by-pmt">${fmt(p1)}/mo</div><div class="by-save">saves ${fmt(s1)}/mo</div></div>`;
+    html+=`<div class="by-card"><div class="by-yr">Year 2</div><div class="by-rate">${(noteRate*100-2).toFixed(2)}%</div><div class="by-pmt">${fmt(p2)}/mo</div><div class="by-save">saves ${fmt(s2)}/mo</div></div>`;
+    html+=`<div class="by-card"><div class="by-yr">Year 3</div><div class="by-rate">${(noteRate*100-1).toFixed(2)}%</div><div class="by-pmt">${fmt(p3)}/mo</div><div class="by-save">saves ${fmt(s3)}/mo</div></div>`;
+  } else if(type==='21'){
+    const r1=noteRate-0.02, r2=noteRate-0.01;
+    const p1=pmt(r1/12,n,loan), p2=pmt(r2/12,n,loan);
+    const s1=fullPmt-p1, s2=fullPmt-p2;
+    costEst=s1*12+s2*12;
+    html+=`<div class="by-card"><div class="by-yr">Year 1</div><div class="by-rate">${(noteRate*100-2).toFixed(2)}%</div><div class="by-pmt">${fmt(p1)}/mo</div><div class="by-save">saves ${fmt(s1)}/mo</div></div>`;
+    html+=`<div class="by-card"><div class="by-yr">Year 2</div><div class="by-rate">${(noteRate*100-1).toFixed(2)}%</div><div class="by-pmt">${fmt(p2)}/mo</div><div class="by-save">saves ${fmt(s2)}/mo</div></div>`;
   } else {
-    html+=`<div class="by-card"><div class="by-yr">Year 1</div><div class="by-rate">${(noteRate*100-1).toFixed(2)}%</div><div class="by-pmt">${fmt(pmt1)}/mo</div><div class="by-save">saves ${fmt(save1)}/mo</div></div>`;
+    const r1=noteRate-0.01;
+    const p1=pmt(r1/12,n,loan);
+    const s1=fullPmt-p1;
+    costEst=s1*12;
+    html+=`<div class="by-card"><div class="by-yr">Year 1</div><div class="by-rate">${(noteRate*100-1).toFixed(2)}%</div><div class="by-pmt">${fmt(p1)}/mo</div><div class="by-save">saves ${fmt(s1)}/mo</div></div>`;
   }
-  html+=`<div class="by-card current"><div class="by-yr">Year ${type==='21'?'3+':'2+'}</div><div class="by-rate">${(noteRate*100).toFixed(2)}%</div><div class="by-pmt">${fmt(fullPmt)}/mo</div><div class="by-save" style="color:var(--muted)">full rate</div></div>`;
+  const fullYr={321:'4+',21:'3+',10:'2+'}[type];
+  html+=`<div class="by-card current"><div class="by-yr">Year ${fullYr}</div><div class="by-rate">${(noteRate*100).toFixed(2)}%</div><div class="by-pmt">${fmt(fullPmt)}/mo</div><div class="by-save" style="color:var(--muted)">full rate</div></div>`;
 
   document.getElementById('bd-years').innerHTML=html;
   document.getElementById('bd-cost').textContent=fmt(costEst);
