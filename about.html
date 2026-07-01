@@ -252,6 +252,14 @@ section{padding:84px 0}
 .comm-photo{aspect-ratio:1/1;border-radius:20px;background:linear-gradient(155deg,var(--brass),#3a0000);display:grid;place-items:center;text-align:center;box-shadow:var(--shadow)}
 .comm-photo .ph-label{color:rgba(255,255,255,.8);font-family:'Spline Sans Mono',monospace;font-size:.82rem;padding:24px}
 @media(max-width:820px){.comm-grid{grid-template-columns:1fr;gap:36px}}
+.comm-gallery{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;cursor:pointer}
+.comm-slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease}
+.comm-slide.comm-active{opacity:1;z-index:2}
+.comm-slide img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.comm-slide-label{position:absolute;bottom:0;left:0;right:0;padding:12px 16px;font-size:.85rem;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff}
+.comm-dots{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.comm-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28);border:0;padding:0;cursor:pointer;transition:background .3s}
+.comm-dot.comm-active{background:rgba(255,255,255,.9)}
 
 /* ---------- second opinion strip ---------- */
 .strip{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:48px;text-align:center}
@@ -458,33 +466,42 @@ footer ul a:hover{color:var(--brass-soft)}
   </div>
 </section>
 
-<!-- ============ BEYOND THE OFFICE ============ -->
-<section class="community">
+<!-- ============ COMMUNITY ============ -->
+<section id="community" class="community">
   <div class="wrap">
     <div class="comm-grid">
       <div class="reveal">
-        <span class="eyebrow">Beyond the Office</span>
-        <h2 style="margin:12px 0 8px">Family first, Cherokee County always.</h2>
-        <p style="color:rgba(255,255,255,.82)">When I'm not working a file, I'm with the people who make all of it worth it.</p>
+        <span class="eyebrow">Rooted in Cherokee County</span>
+        <h2 style="margin:12px 0 8px">More than a loan officer in this community.</h2>
+        <p style="color:rgba(255,255,255,.82)">I don't just work here. My family lives here, and I'm invested in it on and off the clock. The relationships I build coaching and volunteering are the same ones that make me a better advocate for my clients.</p>
         <div class="comm-list">
           <div class="comm-item">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-            <div><h4>My family</h4><p>My wife Ashley and our two kids, JJ and Reagan, are the reason I do this — and the reason I work the way I do.</p></div>
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6.5 6.5 11 11M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M3 10l7-7M14 21l7-7"/></svg></span>
+            <div><h4>Youth Football — Defensive Coordinator</h4><p>Leading the defense for a local youth team, teaching effort, accountability, and how to compete the right way.</p></div>
           </div>
           <div class="comm-item">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div><h4>Rooted in Cherokee County</h4><p>This is home. I live, work, and raise my family here — and most of my business comes from neighbors, past clients, and referrals.</p></div>
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M5 5c4 3 9 3 14 0M5 19c4-3 9-3 14 0"/></svg></span>
+            <div><h4>Travel Baseball Coach</h4><p>Coaching youth travel ball, building skills, discipline, and teamwork on and off the field.</p></div>
           </div>
           <div class="comm-item">
-            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span>
-            <div><h4>Local sports &amp; youth athletics</h4><p>I'm proud to support local athletic and youth sports teams around the area — strong communities get built on the fields and courts as much as anywhere.</p></div>
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span>
+            <div><h4>Chamber of Commerce Member</h4><p>Active in the Chamber of Commerce, supporting small-business owners and local economic growth.</p></div>
           </div>
         </div>
       </div>
       <div class="reveal">
-        <!-- PLACEHOLDER: replace with a candid photo (family or community).
-             <img src="your-photo.jpg" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:20px"> -->
-        <div class="comm-photo"><span class="ph-label">📷 A candid photo here —<br>you with family or out<br>in the community<br>(1:1 square)</span></div>
+        <div class="comm-gallery" id="comm-gallery">
+          <div class="comm-slide comm-active" data-i="0"><img src="community-football-team.jpg" alt="Youth football team holding Garrett Potz sponsor banner"><div class="comm-slide-label">Football Sponsor</div></div>
+          <div class="comm-slide" data-i="1"><img src="community-football-coaching.jpg" alt="Garrett coaching youth football Eagles on game day"><div class="comm-slide-label">Youth Football Coach</div></div>
+          <div class="comm-slide" data-i="2"><img src="community-baseball.jpg" alt="Garrett coaching travel baseball"><div class="comm-slide-label">Travel Baseball Coach</div></div>
+          <div class="comm-slide" data-i="3"><img src="community-networking.jpg" alt="Garrett at Affinity Home Lending networking event"><div class="comm-slide-label">Community &amp; Networking</div></div>
+        </div>
+        <div class="comm-dots" id="comm-dots">
+          <button class="comm-dot comm-active" data-i="0" aria-label="Football Sponsor"></button>
+          <button class="comm-dot" data-i="1" aria-label="Youth Football Coach"></button>
+          <button class="comm-dot" data-i="2" aria-label="Travel Baseball Coach"></button>
+          <button class="comm-dot" data-i="3" aria-label="Community and Networking"></button>
+        </div>
       </div>
     </div>
   </div>
@@ -600,6 +617,24 @@ const io=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Community gallery
+(function(){
+  var slides=Array.from(document.querySelectorAll('#comm-gallery .comm-slide'));
+  var dots=Array.from(document.querySelectorAll('#comm-dots .comm-dot'));
+  var active=0;
+  var timer;
+  function show(idx){
+    slides.forEach(function(s,i){s.classList.toggle('comm-active',i===idx);});
+    dots.forEach(function(d,i){d.classList.toggle('comm-active',i===idx);});
+    active=idx;
+  }
+  function next(){show((active+1)%slides.length);}
+  function start(){clearInterval(timer);timer=setInterval(next,3500);}
+  slides.forEach(function(s,i){s.addEventListener('click',function(){show(i);start();});});
+  dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);start();});});
+  start();
+})();
 </script>
 </body>
 </html>
