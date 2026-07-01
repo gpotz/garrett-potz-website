@@ -23,7 +23,13 @@
       "Bash(git push *)",
       "mcp__visualize__read_me",
       "mcp__visualize__show_widget",
-      "WebFetch(domain:mortgagemayo.com)"
+      "WebFetch(domain:mortgagemayo.com)",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__computer",
+      "WebFetch(domain:www.uwm.com)",
+      "WebSearch",
+      "WebFetch(domain:www.scotsmanguide.com)",
+      "WebFetch(domain:www.thetruthaboutmortgage.com)"
     ]
   }
 }
