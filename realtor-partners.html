@@ -138,6 +138,11 @@ section{padding:84px 0}
 .cow-diff{margin-top:14px;background:#fdf0f0;border:1px solid #f5c6c6;border-radius:8px;padding:14px 16px;font-size:.9rem;color:#7b1818;font-weight:500}
 @media(max-width:600px){.cow-grid{grid-template-columns:1fr}}
 
+/* housecanary list */
+.hc-list{display:flex;flex-direction:column;gap:12px}
+.hc-item{display:flex;align-items:flex-start;gap:12px;font-size:.93rem;color:var(--ink)}
+.hc-dot{width:8px;height:8px;border-radius:50%;background:var(--brass);flex-shrink:0;margin-top:6px}
+
 /* why partner */
 .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .vcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:32px 28px;transition:transform .2s,box-shadow .2s}
@@ -365,6 +370,34 @@ footer ul a:hover{color:#fff}
               </div>
             </div>
             <div class="cow-diff" id="cow-summary"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOOL 4: HOUSECANARY REPORT -->
+      <div class="tool">
+        <div class="tool-head">
+          <div class="tool-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <h3>HouseCanary Property Report</h3>
+            <p>Institutional-grade property valuation data, pulled free through UWM and sent straight to you</p>
+          </div>
+        </div>
+        <div class="tool-body">
+          <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px">Send me any address and I'll pull a HouseCanary report at no cost. This is the same valuation data institutional lenders use for underwriting. It gives you and your client a grounded, defensible picture of what a home is actually worth before you write or accept an offer.</p>
+          <div class="hc-list">
+            <div class="hc-item"><div class="hc-dot"></div><div><strong>Estimated market value</strong> with a confidence score and low/high value range</div></div>
+            <div class="hc-item"><div class="hc-dot"></div><div><strong>Comparable sales</strong> used to support the valuation, with address and sale details</div></div>
+            <div class="hc-item"><div class="hc-dot"></div><div><strong>12-month price forecast</strong> for the subject property</div></div>
+            <div class="hc-item"><div class="hc-dot"></div><div><strong>Neighborhood market trends</strong> including median price movement and days on market</div></div>
+            <div class="hc-item"><div class="hc-dot"></div><div><strong>Market risk score</strong> indicating how stable or volatile the local market is</div></div>
+            <div class="hc-item"><div class="hc-dot"></div><div><strong>Property details</strong> including bed/bath count, square footage, year built, and lot size</div></div>
+          </div>
+          <div style="margin-top:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+            <a href="mailto:gpotz@affinityhomelending.com?subject=HouseCanary Report Request&body=Hi Garrett, can you pull a HouseCanary report for this address: " class="calc-btn" style="display:inline-block;text-decoration:none">Request a Report</a>
+            <span style="font-size:.88rem;color:var(--muted)">Or text me the address at <a href="sms:+17704011759" style="color:var(--brass);font-weight:600">(770) 401-1759</a></span>
           </div>
         </div>
       </div>
