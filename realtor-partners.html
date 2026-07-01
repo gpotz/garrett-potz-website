@@ -138,6 +138,34 @@ section{padding:84px 0}
 .cow-diff{margin-top:14px;background:#fdf0f0;border:1px solid #f5c6c6;border-radius:8px;padding:14px 16px;font-size:.9rem;color:#7b1818;font-weight:500}
 @media(max-width:600px){.cow-grid{grid-template-columns:1fr}}
 
+/* buydown enhancements */
+.bd-total{margin-top:18px;background:var(--pine);color:#fff;border-radius:10px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.bd-total-lbl{font-size:.9rem;font-weight:600;color:rgba(255,255,255,.8)}
+.bd-total-val{font-size:1.6rem;font-family:'Fraunces',serif;font-weight:700;color:#fff;white-space:nowrap}
+.bd-meta{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.bd-meta-card{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:18px}
+.bd-meta-card h4{font-family:'Spline Sans Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.bd-pr-amount{font-size:1.3rem;font-family:'Fraunces',serif;font-weight:700;color:var(--ink);margin:10px 0 4px}
+.bd-pr-tag{font-size:.82rem;color:var(--muted);margin-bottom:8px}
+.bd-pr-save{font-size:.88rem;color:#1a7a4a;font-weight:600}
+.bd-compare-row{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:8px;font-size:.88rem;margin-bottom:6px;background:var(--paper);border:1px solid var(--line)}
+.bd-compare-row.active{background:var(--pine);color:#fff;border-color:var(--pine)}
+.bd-compare-row.active .bd-cr-sub{color:rgba(255,255,255,.65)}
+.bd-compare-row .bd-cr-sub{font-size:.78rem;color:var(--muted);margin-top:2px}
+.bd-compare-row .bd-cr-cost{font-weight:700;font-size:.95rem;white-space:nowrap}
+.bd-how{margin-top:18px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.bd-how-toggle{width:100%;background:none;border:0;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;color:var(--ink);text-align:left}
+.bd-how-toggle:hover{background:rgba(0,0,0,.025)}
+.bd-how-arrow{transition:transform .2s;font-size:.7rem;color:var(--muted)}
+.bd-how-body{display:none;padding:0 18px 20px;font-size:.88rem;color:var(--muted);line-height:1.7}
+.bd-how-body.open{display:block}
+.bd-disclaimer{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;margin-bottom:14px;font-size:.85rem;color:#92400e}
+.bd-disclaimer strong{display:block;margin-bottom:3px;color:#78350f}
+.bd-how-body h5{font-size:.85rem;font-weight:700;color:var(--ink);margin:14px 0 6px}
+.bd-how-body ul{padding-left:18px}
+.bd-how-body ul li{margin-bottom:5px}
+@media(max-width:600px){.bd-meta{grid-template-columns:1fr}}
+
 /* housecanary list */
 .hc-list{display:flex;flex-direction:column;gap:12px}
 .hc-item{display:flex;align-items:flex-start;gap:12px;font-size:.93rem;color:var(--ink)}
@@ -326,7 +354,57 @@ footer ul a:hover{color:#fff}
           <button class="calc-btn" onclick="calcBuydown()">Calculate Buydown</button>
           <div class="results" id="bd-results">
             <div class="buydown-years" id="bd-years"></div>
-            <div class="results-row" style="margin-top:16px"><span class="lbl">Estimated seller cost to fund buydown</span><span class="val" id="bd-cost">—</span></div>
+            <div class="bd-total">
+              <span class="bd-total-lbl">Total seller credit required</span>
+              <span class="bd-total-val" id="bd-cost">—</span>
+            </div>
+            <div class="bd-meta">
+              <div class="bd-meta-card">
+                <h4>Buydown vs. Price Reduction</h4>
+                <p style="font-size:.85rem;color:var(--muted)">To give the buyer the same Year 1 monthly savings via a price cut, the seller would need to reduce by approximately:</p>
+                <div class="bd-pr-amount" id="bd-pr-amount">—</div>
+                <div class="bd-pr-tag">price reduction</div>
+                <div class="bd-pr-save" id="bd-pr-save"></div>
+              </div>
+              <div class="bd-meta-card">
+                <h4>Compare All Structures</h4>
+                <div id="bd-compare-all"></div>
+              </div>
+            </div>
+            <div class="bd-how">
+              <button class="bd-how-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.bd-how-arrow').style.transform=this.nextElementSibling.classList.contains('open')?'rotate(180deg)':''">How does this tool work? <span class="bd-how-arrow">▼</span></button>
+              <div class="bd-how-body">
+                <div class="bd-disclaimer"><strong>This is an estimate, not a quote.</strong>Actual buydown costs depend on the exact note rate, loan amount, and lender guidelines. Call or text me for a precise seller credit number on a specific deal.</div>
+                <p>A temporary buydown uses a seller credit deposited into an escrow account at closing to subsidize the buyer's monthly payments during the first 1 to 3 years of the loan. The buyer's note rate stays the same. The escrow account pays the difference between the full payment and the reduced payment each month.</p>
+                <h5>How the math works</h5>
+                <ul>
+                  <li>The note rate is the actual rate on the mortgage. It never changes.</li>
+                  <li>During buydown years, the buyer pays as if their rate were lower (e.g., note rate minus 2%)</li>
+                  <li>The seller credit equals the total payment difference across all buydown years</li>
+                  <li>After the buydown period ends, the buyer pays the full note-rate payment</li>
+                </ul>
+                <h5>Buydown structures</h5>
+                <ul>
+                  <li><strong>3-2-1:</strong> Rate drops 3% in year 1, 2% in year 2, 1% in year 3. Largest savings, highest seller cost.</li>
+                  <li><strong>2-1:</strong> Rate drops 2% in year 1, 1% in year 2. The most common buydown structure.</li>
+                  <li><strong>1-0:</strong> Rate drops 1% in year 1 only. Smallest seller credit, still meaningful savings.</li>
+                </ul>
+                <h5>Why suggest a buydown instead of a price cut?</h5>
+                <ul>
+                  <li>Buydowns give the buyer immediate monthly relief. A price cut barely moves the payment.</li>
+                  <li>The seller credit is often less than an equivalent price reduction would be</li>
+                  <li>Buydowns can help buyers qualify at the reduced year-1 payment (lender dependent)</li>
+                  <li>Great negotiation tool when rates are high and buyers are payment sensitive</li>
+                </ul>
+                <h5>What this tool doesn't account for</h5>
+                <ul>
+                  <li>Lender-specific caps on seller credits (varies by loan type and LTV)</li>
+                  <li>Whether the buyer qualifies at the buydown rate vs. the note rate</li>
+                  <li>Property taxes, insurance, or mortgage insurance. This is P&amp;I only.</li>
+                  <li>Adjustable-rate mortgages or non-standard loan terms</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -589,6 +667,29 @@ function calcBuydown(){
 
   document.getElementById('bd-years').innerHTML=html;
   document.getElementById('bd-cost').textContent=fmt(costEst);
+
+  // Buydown vs. price reduction (based on Year 1 savings)
+  const yr1Save=type==='321'?(fullPmt-pmt((noteRate-0.03)/12,n,loan)):type==='21'?(fullPmt-pmt((noteRate-0.02)/12,n,loan)):(fullPmt-pmt((noteRate-0.01)/12,n,loan));
+  const priceReduction=(yr1Save*loan/fullPmt)/(1-downPct);
+  const prSave=priceReduction-costEst;
+  document.getElementById('bd-pr-amount').textContent=fmt(priceReduction);
+  document.getElementById('bd-pr-save').textContent='The buydown costs the seller '+fmt(prSave)+' less than that price cut.';
+
+  // Compare all structures
+  const structs=[
+    {label:'3-2-1 Buydown',id:'321',drops:[0.03,0.02,0.01]},
+    {label:'2-1 Buydown',id:'21',drops:[0.02,0.01]},
+    {label:'1-0 Buydown',id:'10',drops:[0.01]}
+  ];
+  let chtml='';
+  structs.forEach(function(s){
+    const cost=s.drops.reduce(function(acc,d){return acc+(fullPmt-pmt((noteRate-d)/12,n,loan))*12;},0);
+    const yr1Pmt=pmt((noteRate-s.drops[0])/12,n,loan);
+    const active=s.id===type;
+    chtml+='<div class="bd-compare-row'+(active?' active':'')+'"><div><div>'+(active?'<strong>':'')+s.label+(active?'</strong>':'')+'</div><div class="bd-cr-sub">Yr 1 payment: '+fmt(yr1Pmt)+'/mo</div></div><div class="bd-cr-cost">'+fmt(cost)+'</div></div>';
+  });
+  document.getElementById('bd-compare-all').innerHTML=chtml;
+
   document.getElementById('bd-results').classList.add('show');
 }
 
