@@ -14,7 +14,16 @@
       "mcp__Claude_Preview__preview_start",
       "PowerShell(& \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" install -g serve)",
       "PowerShell(Get-Command serve -ErrorAction SilentlyContinue)",
-      "PowerShell(Rename-Item \"G:\\\\Shared drives\\\\PRODUCTION-LO-Garrett-Potz\\\\Marketing\\\\garrett-potz-website\\\\affinity-logo.png.png\" \"affinity-logo.png\")"
+      "PowerShell(Rename-Item \"G:\\\\Shared drives\\\\PRODUCTION-LO-Garrett-Potz\\\\Marketing\\\\garrett-potz-website\\\\affinity-logo.png.png\" \"affinity-logo.png\")",
+      "Bash(git pull *)",
+      "PowerShell(\\(Get-Command node -ErrorAction SilentlyContinue\\).Source; \\(Get-Command npx -ErrorAction SilentlyContinue\\).Source; \\(Get-Command python -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell(Get-Command node,npx,python,python3,py -ErrorAction SilentlyContinue)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "WebFetch(domain:mortgagemayo.com)"
     ]
   }
 }

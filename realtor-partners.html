@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Realtor Partners | Garrett Potz — Mortgage Broker, Woodstock GA</title>
+<meta name="description" content="Partner with Garrett Potz, independent mortgage broker at Affinity Home Lending. Free tools for agents: PITI calculator, buydown calculator, cost-of-waiting tool, and fast pre-approvals across GA, FL, AL, TN & SC.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pine:#161616;
+  --pine-deep:#0a0a0a;
+  --brass:#850000;
+  --brass-soft:#d64545;
+  --cream:#f6f5f5;
+  --paper:#ffffff;
+  --ink:#141414;
+  --muted:#5d5d5d;
+  --line:#e4e4e6;
+  --maxw:1140px;
+  --r:14px;
+  --shadow:0 18px 50px -28px rgba(20,40,30,.45);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+.eyebrow{font-family:'Spline Sans Mono',monospace;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--brass)}
+mark{background:linear-gradient(180deg,transparent 58%,rgba(133,0,0,.18) 58%);color:inherit;padding:0 .05em}
+
+.btn{display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.95rem;padding:14px 26px;border-radius:10px;transition:transform .15s ease,box-shadow .2s ease,background .2s ease;cursor:pointer;border:0}
+.btn-primary{background:var(--brass);color:#fff;box-shadow:0 10px 24px -12px rgba(133,0,0,.45)}
+.btn-primary:hover{background:var(--brass-soft);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--pine);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--pine);background:rgba(29,59,50,.04)}
+.btn-light{background:var(--cream);color:var(--pine)}
+.btn-light:hover{background:#fff;transform:translateY(-2px)}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;min-height:84px;padding:4px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:auto;height:84px;flex-shrink:0;object-fit:contain;background:#fff;border-radius:6px;padding:2px}
+.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;line-height:1.1}
+.brand-sub{font-size:.7rem;color:var(--muted);font-family:'Spline Sans Mono',monospace;letter-spacing:.05em}
+.nav-links{display:flex;align-items:center;gap:22px;font-size:.9rem;font-weight:500}
+.nav-links > a{color:var(--muted);transition:color .15s;white-space:nowrap}
+.nav-links > a:hover,.nav-links > a.active{color:var(--pine)}
+.nav-links > a.active{color:var(--brass)}
+.dropdown{position:relative}
+.dropdown > button{display:inline-flex;align-items:center;gap:5px;background:none;border:0;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:500;color:var(--muted);transition:color .15s}
+.dropdown > button:hover,.dropdown:focus-within > button{color:var(--pine)}
+.dropdown > button .caret{font-size:.62rem;transition:transform .2s}
+.dropdown:hover > button .caret,.dropdown:focus-within > button .caret{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(6px);background:var(--paper);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:8px;min-width:230px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease;z-index:60}
+.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown-menu a{padding:10px 14px;border-radius:8px;font-size:.9rem;color:var(--ink);transition:background .12s,color .12s}
+.dropdown-menu a:hover{background:rgba(133,0,0,.06);color:var(--brass)}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-call{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:.9rem;color:var(--brass);background:rgba(133,0,0,.08);border:1.5px solid rgba(133,0,0,.28);border-radius:10px;padding:9px 15px;white-space:nowrap;transition:background .15s,color .15s,border-color .15s}
+.nav-call:hover{background:var(--brass);color:#fff;border-color:var(--brass)}
+.menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--pine);cursor:pointer}
+@media(max-width:1080px){.nav-links{display:none}.nav-call .nav-call-txt{display:none}.nav-call{padding:9px 11px;gap:0}.menu-btn{display:block}}
+.mobile-menu .mm-group{font-family:'Spline Sans Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);padding:14px 0 4px}
+.mobile-menu .mm-sub{padding-left:16px}
+.mobile-menu{display:none;flex-direction:column;gap:4px;padding:12px 24px 20px;border-bottom:1px solid var(--line);background:var(--cream)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:10px 0;color:var(--ink);font-weight:500;border-bottom:1px solid var(--line)}
+
+/* sections */
+section{padding:84px 0}
+.sec-head{max-width:42em;margin-bottom:48px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{margin:12px 0 16px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* hero */
+.hero{padding:72px 0 84px;background:var(--pine);color:#f3f3f4}
+.hero .eyebrow{color:var(--brass-soft)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);margin:16px 0 20px;color:#fff}
+.hero p.lead{font-size:1.12rem;color:rgba(255,255,255,.82);max-width:36em;margin-bottom:32px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:38px}
+.trust-row{display:flex;flex-wrap:wrap;gap:12px 28px}
+.trust-item{display:flex;align-items:center;gap:9px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.85)}
+.trust-item svg{flex-shrink:0;color:var(--brass-soft)}
+
+/* tools */
+.tool-grid{display:flex;flex-direction:column;gap:32px}
+.tool{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.tool-head{background:var(--pine);color:#fff;padding:22px 28px;display:flex;align-items:center;gap:14px}
+.tool-head .tool-icon{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.12);display:grid;place-items:center;flex-shrink:0;color:var(--brass-soft)}
+.tool-head h3{font-family:'Fraunces',serif;font-size:1.25rem;color:#fff;margin:0}
+.tool-head p{font-size:.88rem;color:rgba(255,255,255,.7);margin:4px 0 0}
+.tool-body{padding:28px}
+.tool-inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-bottom:24px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.82rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.field input,.field select{width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:8px;font-size:.95rem;font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);transition:border-color .15s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--brass)}
+.field .prefix{position:relative}
+.field .prefix input{padding-left:26px}
+.field .prefix::before{content:'$';position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.9rem;pointer-events:none}
+.field .suffix{position:relative}
+.field .suffix input{padding-right:28px}
+.field .suffix::after{content:'%';position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.9rem;pointer-events:none}
+.calc-btn{background:var(--brass);color:#fff;border:0;padding:11px 26px;border-radius:8px;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .15s}
+.calc-btn:hover{background:var(--brass-soft)}
+.results{margin-top:22px;background:var(--cream);border-radius:10px;padding:22px 24px;display:none}
+.results.show{display:block}
+.results-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.results-row:last-child{border-bottom:0}
+.results-row.total{font-weight:700;font-size:1.1rem;padding-top:14px}
+.results-row.total .val{color:var(--brass);font-size:1.25rem}
+.results-row .lbl{color:var(--muted)}
+.results-row .val{font-weight:600}
+.buydown-years{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:16px}
+.by-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px 18px;text-align:center}
+.by-card .by-yr{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.by-card .by-rate{font-size:1.4rem;font-family:'Fraunces',serif;font-weight:600;color:var(--brass);line-height:1}
+.by-card .by-pmt{font-size:.9rem;color:var(--ink);margin-top:6px;font-weight:500}
+.by-card .by-save{font-size:.8rem;color:#1a7a4a;margin-top:4px;font-weight:500}
+.by-card.current{border-color:var(--brass)}
+.cow-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.cow-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.cow-card.future{border-color:#c0392b}
+.cow-card h4{font-family:'Fraunces',serif;font-size:1rem;margin-bottom:12px}
+.cow-card .cow-row{display:flex;justify-content:space-between;font-size:.88rem;padding:5px 0;border-bottom:1px solid var(--line)}
+.cow-card .cow-row:last-child{border-bottom:0;font-weight:700}
+.cow-diff{margin-top:14px;background:#fdf0f0;border:1px solid #f5c6c6;border-radius:8px;padding:14px 16px;font-size:.9rem;color:#7b1818;font-weight:500}
+@media(max-width:600px){.cow-grid{grid-template-columns:1fr}}
+
+/* why partner */
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.vcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:32px 28px;transition:transform .2s,box-shadow .2s}
+.vcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.vcard .ic{width:48px;height:48px;border-radius:12px;background:rgba(133,0,0,.08);color:var(--brass);display:grid;place-items:center;margin-bottom:18px}
+.vcard h3{font-size:1.2rem;margin-bottom:10px}
+.vcard p{color:var(--muted);font-size:.95rem}
+@media(max-width:820px){.cards-3{grid-template-columns:1fr}}
+
+/* final cta */
+.final{background:var(--pine);border-radius:24px;padding:64px 48px;text-align:center;color:#f3f3f4}
+.final h2{color:#fff;margin-bottom:16px}
+.final p{color:rgba(255,255,255,.8);font-size:1.05rem;max-width:36em;margin:0 auto 32px}
+.contact-line{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:20px;font-size:.9rem;color:rgba(255,255,255,.65)}
+@media(max-width:640px){.final{padding:48px 24px}}
+
+/* footer */
+footer{background:var(--pine-deep);color:rgba(255,255,255,.75);padding:64px 0 32px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-brand p{font-size:.9rem;line-height:1.7;margin:16px 0 14px;color:rgba(255,255,255,.6)}
+.foot-nmls{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.6;margin-bottom:14px}
+.eho{display:flex;align-items:flex-start;gap:8px;font-size:.78rem;color:rgba(255,255,255,.45);line-height:1.5}
+.ehologo{font-size:1.3rem;line-height:1;flex-shrink:0;margin-top:2px}
+footer h5{font-family:'Spline Sans Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px}
+footer ul{list-style:none}
+footer ul li{margin-bottom:10px}
+footer ul a{font-size:.9rem;color:rgba(255,255,255,.65);transition:color .15s}
+footer ul a:hover{color:#fff}
+.social-row{display:flex;gap:14px;margin-top:18px}
+.social-row a{color:rgba(255,255,255,.5);transition:color .15s}
+.social-row a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:28px;font-size:.78rem;color:rgba(255,255,255,.35);line-height:1.8;display:flex;gap:18px;align-items:flex-start}
+.foot-bottom a{color:rgba(255,255,255,.45)}
+.foot-bottom a:hover{color:#fff}
+.ehl-logo{width:32px;height:42px;color:rgba(255,255,255,.3);flex-shrink:0;margin-top:2px}
+@media(max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:480px){.foot-grid{grid-template-columns:1fr}}
+.brand-mark{width:auto;height:84px;flex-shrink:0;object-fit:contain;background:#fff;border-radius:6px;padding:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand">
+        <img src="affinity-logo.png" alt="Affinity Home Lending" class="brand-mark">
+        <span>
+          <span class="brand-name">Garrett Potz</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="loan-options.html">Loan Options</a>
+        <a href="locations.html">Locations</a>
+        <a href="guides.html">Guides</a>
+        <div class="dropdown">
+          <button>Tools <span class="caret">▼</span></button>
+          <div class="dropdown-menu">
+            <a href="calculator.html">Mortgage Calculator</a>
+            <a href="rent-vs-buy.html">Rent vs. Buy</a>
+            <a href="affordability.html">Affordability Calculator</a>
+            <a href="home-value.html">Home Value Estimator</a>
+            <a href="second-opinion.html">Second Opinion</a>
+            <a href="roadmap.html">Mortgage Roadmap</a>
+          </div>
+        </div>
+        <a href="realtor-partners.html" class="active">Realtors</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:+17704011759" class="nav-call" aria-label="Call or text (770) 401-1759"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="nav-call-txt">Call</span></a>
+        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="loan-options.html">Loan Options</a>
+    <a href="locations.html">Locations</a>
+    <a href="guides.html">Guides</a>
+    <span class="mm-group">Tools</span>
+    <a class="mm-sub" href="calculator.html">Mortgage Calculator</a>
+    <a class="mm-sub" href="rent-vs-buy.html">Rent vs. Buy</a>
+    <a class="mm-sub" href="affordability.html">Affordability Calculator</a>
+    <a class="mm-sub" href="home-value.html">Home Value Estimator</a>
+    <a class="mm-sub" href="second-opinion.html">Second Opinion</a>
+    <a class="mm-sub" href="roadmap.html">Mortgage Roadmap</a>
+    <a href="realtor-partners.html">Realtors</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener">Get Started</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Realtor Partners</span>
+    <h1>The lender who <mark>closes</mark> and communicates.</h1>
+    <p class="lead">I work with agents across Georgia, Florida, Alabama, Tennessee, and South Carolina who need a mortgage partner they can trust in front of their clients — fast pre-approvals, programs that cover tricky income, and a direct line that actually gets answered.</p>
+    <div class="hero-cta">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Send Me Your Buyer</a>
+      <a href="contact.html" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.3)">Talk to Garrett</a>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Same-day pre-approval letters</div>
+      <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> 45 wholesale lenders</div>
+      <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Bank statement, 1099, DSCR for self-employed buyers</div>
+      <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> You'll hear from me before you have to ask</div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Free Agent Tools</span>
+      <h2>Numbers your clients can act on.</h2>
+      <p>Use these at listing appointments, open houses, or buyer consults. No login, no paywall.</p>
+    </div>
+
+    <div class="tool-grid">
+
+      <!-- TOOL 1: PITI CALCULATOR -->
+      <div class="tool">
+        <div class="tool-head">
+          <div class="tool-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          </div>
+          <div>
+            <h3>PITI Payment Estimator</h3>
+            <p>Full monthly payment breakdown including taxes, insurance, and PMI</p>
+          </div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-inputs">
+            <div class="field"><label>Home Price</label><div class="prefix"><input type="number" id="piti-price" value="450000" min="50000" step="5000"></div></div>
+            <div class="field"><label>Down Payment %</label><div class="suffix"><input type="number" id="piti-down" value="10" min="0" max="100" step=".5"></div></div>
+            <div class="field"><label>Interest Rate</label><div class="suffix"><input type="number" id="piti-rate" value="7.25" min="1" max="20" step=".125"></div></div>
+            <div class="field"><label>Loan Term</label><select id="piti-term"><option value="30">30 years</option><option value="20">20 years</option><option value="15">15 years</option></select></div>
+            <div class="field"><label>Annual Tax Rate</label><div class="suffix"><input type="number" id="piti-tax" value="1.1" min="0" max="5" step=".1"></div></div>
+            <div class="field"><label>Insurance / mo</label><div class="prefix"><input type="number" id="piti-ins" value="120" min="0" step="10"></div></div>
+            <div class="field"><label>HOA / mo</label><div class="prefix"><input type="number" id="piti-hoa" value="0" min="0" step="25"></div></div>
+          </div>
+          <button class="calc-btn" onclick="calcPITI()">Calculate Payment</button>
+          <div class="results" id="piti-results">
+            <div class="results-row"><span class="lbl">Principal &amp; Interest</span><span class="val" id="pr-pi">—</span></div>
+            <div class="results-row"><span class="lbl">Property Taxes</span><span class="val" id="pr-tax">—</span></div>
+            <div class="results-row"><span class="lbl">Home Insurance</span><span class="val" id="pr-ins">—</span></div>
+            <div class="results-row"><span class="lbl">PMI (if &lt;20% down)</span><span class="val" id="pr-pmi">—</span></div>
+            <div class="results-row"><span class="lbl">HOA</span><span class="val" id="pr-hoa">—</span></div>
+            <div class="results-row total"><span class="lbl">Total Monthly Payment</span><span class="val" id="pr-total">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOOL 2: BUYDOWN CALCULATOR -->
+      <div class="tool">
+        <div class="tool-head">
+          <div class="tool-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div>
+            <h3>Temporary Buydown Calculator</h3>
+            <p>Show sellers and buyers what a 2-1 or 1-0 buydown actually saves</p>
+          </div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-inputs">
+            <div class="field"><label>Purchase Price</label><div class="prefix"><input type="number" id="bd-price" value="450000" min="50000" step="5000"></div></div>
+            <div class="field"><label>Down Payment %</label><div class="suffix"><input type="number" id="bd-down" value="10" min="0" max="100" step=".5"></div></div>
+            <div class="field"><label>Note Rate (full rate)</label><div class="suffix"><input type="number" id="bd-rate" value="7.25" min="1" max="20" step=".125"></div></div>
+            <div class="field"><label>Buydown Type</label><select id="bd-type"><option value="21">2-1 Buydown</option><option value="10">1-0 Buydown</option></select></div>
+          </div>
+          <button class="calc-btn" onclick="calcBuydown()">Calculate Buydown</button>
+          <div class="results" id="bd-results">
+            <div class="buydown-years" id="bd-years"></div>
+            <div class="results-row" style="margin-top:16px"><span class="lbl">Estimated seller cost to fund buydown</span><span class="val" id="bd-cost">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOOL 3: COST OF WAITING -->
+      <div class="tool">
+        <div class="tool-head">
+          <div class="tool-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h3>Cost of Waiting Calculator</h3>
+            <p>What does delaying a purchase actually cost a buyer over time?</p>
+          </div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-inputs">
+            <div class="field"><label>Current Home Price</label><div class="prefix"><input type="number" id="cow-price" value="450000" min="50000" step="5000"></div></div>
+            <div class="field"><label>Down Payment %</label><div class="suffix"><input type="number" id="cow-down" value="10" min="0" max="100" step=".5"></div></div>
+            <div class="field"><label>Today's Rate</label><div class="suffix"><input type="number" id="cow-rate-now" value="7.25" min="1" max="20" step=".125"></div></div>
+            <div class="field"><label>Rate if They Wait</label><div class="suffix"><input type="number" id="cow-rate-future" value="7.5" min="1" max="20" step=".125"></div></div>
+            <div class="field"><label>Annual Appreciation</label><div class="suffix"><input type="number" id="cow-appr" value="4" min="0" max="20" step=".5"></div></div>
+            <div class="field"><label>Months to Wait</label><select id="cow-months"><option value="6">6 months</option><option value="12" selected>12 months</option><option value="18">18 months</option><option value="24">24 months</option></select></div>
+          </div>
+          <button class="calc-btn" onclick="calcCOW()">Calculate Cost</button>
+          <div class="results" id="cow-results">
+            <div class="cow-grid">
+              <div class="cow-card">
+                <h4>Buy today</h4>
+                <div class="cow-row"><span>Home price</span><span id="cow-price-now">—</span></div>
+                <div class="cow-row"><span>Down payment</span><span id="cow-dp-now">—</span></div>
+                <div class="cow-row"><span>Loan amount</span><span id="cow-loan-now">—</span></div>
+                <div class="cow-row"><span>Monthly P&I</span><span id="cow-pmt-now">—</span></div>
+              </div>
+              <div class="cow-card future">
+                <h4>Buy in <span id="cow-wait-label">12 months</span></h4>
+                <div class="cow-row"><span>Home price</span><span id="cow-price-future">—</span></div>
+                <div class="cow-row"><span>Down payment</span><span id="cow-dp-future">—</span></div>
+                <div class="cow-row"><span>Loan amount</span><span id="cow-loan-future">—</span></div>
+                <div class="cow-row"><span>Monthly P&I</span><span id="cow-pmt-future">—</span></div>
+              </div>
+            </div>
+            <div class="cow-diff" id="cow-summary"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY PARTNER -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Why agents work with me</span>
+      <h2>Your reputation is on the line too.</h2>
+      <p>I treat every referral like it reflects on both of us — because it does.</p>
+    </div>
+    <div class="cards-3">
+      <div class="vcard">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Closings you can count on</h3>
+        <p>I qualify buyers thoroughly before a contract is written, not after. I won't blow up a deal at the closing table with a surprise condition.</p>
+      </div>
+      <div class="vcard">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3>You'll hear from me first</h3>
+        <p>You won't have to chase me for status updates. I communicate proactively at every milestone — pre-approval, conditional approval, clear to close.</p>
+      </div>
+      <div class="vcard">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/></svg></div>
+        <h3>Programs for tricky buyers</h3>
+        <p>Self-employed clients, 1099 earners, and investors who got turned down elsewhere often qualify with me through bank statement, DSCR, or P&L programs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding-top:84px">
+  <div class="wrap">
+    <div class="final">
+      <span class="eyebrow" style="color:var(--brass-soft)">Ready to partner?</span>
+      <h2>Let's talk about your next buyer.</h2>
+      <p>Send me a buyer through the application link, or just call or text me directly. I'll take it from there and keep you in the loop the whole way.</p>
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-light">Send Me Your Buyer</a>
+      <div class="contact-line">
+        <span>📞 (770) 401-1759</span>
+        <span>✉ gpotz@affinityhomelending.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <img src="affinity-logo.png" alt="Affinity Home Lending" class="brand-mark">
+          <span><span class="brand-name">Garrett Potz</span><br><span class="brand-sub">AFFINITY HOME LENDING</span></span>
+        </div>
+        <p>Helping self-employed borrowers, business owners, and families across Woodstock, Cherokee County, and metro Atlanta find the right mortgage, whether purchasing or refinancing.</p>
+        <div class="foot-nmls">Garrett Potz NMLS #631592 · Affinity Home Lending NMLS #1181151 · Georgia Residential Mortgage Licensee #42129</div>
+        <div class="eho">
+          <span class="ehologo">⌂</span>
+          <span>Equal Housing Lender. This is not a commitment to lend. All loans subject to credit approval.</span>
+        </div>
+      </div>
+      <div>
+        <h5>Programs</h5>
+        <ul>
+          <li><a href="loan-options.html#purchase">Purchase</a></li>
+          <li><a href="loan-options.html#refinance">Refinance</a></li>
+          <li><a href="loan-options.html#self-employed">Bank Statement</a></li>
+          <li><a href="loan-options.html#self-employed">1099 Income</a></li>
+          <li><a href="loan-options.html#dscr">DSCR / Investor</a></li>
+          <li><a href="loan-options.html#self-employed">P&L-Only</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="index.html#process">How It Works</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="index.html#community">Community</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="realtor-partners.html">Realtors</a></li>
+          <li><a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener">Get Started</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="tel:+17704011759">(770) 401-1759</a></li>
+          <li><a href="mailto:gpotz@affinityhomelending.com">Email</a></li>
+          <li><a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener">NMLS Consumer Access</a></li>
+        </ul>
+        <div class="social-row">
+          <a href="https://www.facebook.com/garrettpotz" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a>
+          <a href="https://www.instagram.com/garrettpotz/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.linkedin.com/in/garrettpotz/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a href="https://www.youtube.com/@GarrettPotz" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <svg class="ehl-logo" viewBox="0 0 64 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Equal Housing Lender"><path d="M32 8 L58 30 L50 30 L50 56 L14 56 L14 30 L6 30 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><rect x="23" y="35" width="18" height="4.5" fill="currentColor"/><rect x="23" y="44" width="18" height="4.5" fill="currentColor"/><text x="32" y="69" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="8" font-weight="bold" fill="currentColor">EQUAL HOUSING</text><text x="32" y="80" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="8" font-weight="bold" fill="currentColor">LENDER</text></svg>
+      © 2026 Garrett Potz · Affinity Home Lending LLC · Garrett Potz NMLS #631592 · Company NMLS #1181151 · Georgia Residential Mortgage Licensee #42129 · Equal Housing Lender. Woodstock, GA.<br>
+      Rates and terms are subject to change without notice and depend on individual credit, income, and property factors. This site is for informational purposes and is not an offer to lend.<br>
+      <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+
+function fmt(n){return '$'+Math.round(n).toLocaleString();}
+
+function pmt(r,n,pv){
+  if(r===0)return pv/n;
+  return pv*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+}
+
+function calcPITI(){
+  const price=+document.getElementById('piti-price').value;
+  const downPct=+document.getElementById('piti-down').value/100;
+  const annRate=+document.getElementById('piti-rate').value/100;
+  const term=+document.getElementById('piti-term').value;
+  const taxRate=+document.getElementById('piti-tax').value/100;
+  const ins=+document.getElementById('piti-ins').value;
+  const hoa=+document.getElementById('piti-hoa').value;
+
+  const loan=price*(1-downPct);
+  const pi=pmt(annRate/12,term*12,loan);
+  const tax=price*taxRate/12;
+  const pmiMo=downPct<0.2?loan*0.0075/12:0;
+  const total=pi+tax+ins+pmiMo+hoa;
+
+  document.getElementById('pr-pi').textContent=fmt(pi)+'/mo';
+  document.getElementById('pr-tax').textContent=fmt(tax)+'/mo';
+  document.getElementById('pr-ins').textContent=fmt(ins)+'/mo';
+  document.getElementById('pr-pmi').textContent=downPct>=0.2?'N/A (20%+ down)':fmt(pmiMo)+'/mo';
+  document.getElementById('pr-hoa').textContent=hoa>0?fmt(hoa)+'/mo':'N/A';
+  document.getElementById('pr-total').textContent=fmt(total)+'/mo';
+  document.getElementById('piti-results').classList.add('show');
+}
+
+function calcBuydown(){
+  const price=+document.getElementById('bd-price').value;
+  const downPct=+document.getElementById('bd-down').value/100;
+  const noteRate=+document.getElementById('bd-rate').value/100;
+  const type=document.getElementById('bd-type').value;
+  const loan=price*(1-downPct);
+  const n=360;
+
+  const fullPmt=pmt(noteRate/12,n,loan);
+  const rate1=noteRate-(type==='21'?0.02:0.01);
+  const rate2=noteRate-0.01;
+  const pmt1=pmt(rate1/12,n,loan);
+  const pmt2=pmt(rate2/12,n,loan);
+  const save1=fullPmt-pmt1;
+  const save2=fullPmt-pmt2;
+  const costEst=type==='21'?(save1*12+save2*12):(save1*12);
+
+  let html='';
+  if(type==='21'){
+    html+=`<div class="by-card"><div class="by-yr">Year 1</div><div class="by-rate">${(noteRate*100-2).toFixed(2)}%</div><div class="by-pmt">${fmt(pmt1)}/mo</div><div class="by-save">saves ${fmt(save1)}/mo</div></div>`;
+    html+=`<div class="by-card"><div class="by-yr">Year 2</div><div class="by-rate">${(noteRate*100-1).toFixed(2)}%</div><div class="by-pmt">${fmt(pmt2)}/mo</div><div class="by-save">saves ${fmt(save2)}/mo</div></div>`;
+  } else {
+    html+=`<div class="by-card"><div class="by-yr">Year 1</div><div class="by-rate">${(noteRate*100-1).toFixed(2)}%</div><div class="by-pmt">${fmt(pmt1)}/mo</div><div class="by-save">saves ${fmt(save1)}/mo</div></div>`;
+  }
+  html+=`<div class="by-card current"><div class="by-yr">Year ${type==='21'?'3+':'2+'}</div><div class="by-rate">${(noteRate*100).toFixed(2)}%</div><div class="by-pmt">${fmt(fullPmt)}/mo</div><div class="by-save" style="color:var(--muted)">full rate</div></div>`;
+
+  document.getElementById('bd-years').innerHTML=html;
+  document.getElementById('bd-cost').textContent=fmt(costEst);
+  document.getElementById('bd-results').classList.add('show');
+}
+
+function calcCOW(){
+  const price=+document.getElementById('cow-price').value;
+  const downPct=+document.getElementById('cow-down').value/100;
+  const rateNow=+document.getElementById('cow-rate-now').value/100;
+  const rateFuture=+document.getElementById('cow-rate-future').value/100;
+  const appr=+document.getElementById('cow-appr').value/100;
+  const months=+document.getElementById('cow-months').value;
+
+  const futurePrice=price*Math.pow(1+appr,months/12);
+  const dpNow=price*downPct;
+  const dpFuture=futurePrice*downPct;
+  const loanNow=price-dpNow;
+  const loanFuture=futurePrice-dpFuture;
+  const pmtNow=pmt(rateNow/12,360,loanNow);
+  const pmtFuture=pmt(rateFuture/12,360,loanFuture);
+
+  document.getElementById('cow-wait-label').textContent=months+' months';
+  document.getElementById('cow-price-now').textContent=fmt(price);
+  document.getElementById('cow-dp-now').textContent=fmt(dpNow);
+  document.getElementById('cow-loan-now').textContent=fmt(loanNow);
+  document.getElementById('cow-pmt-now').textContent=fmt(pmtNow)+'/mo';
+  document.getElementById('cow-price-future').textContent=fmt(futurePrice);
+  document.getElementById('cow-dp-future').textContent=fmt(dpFuture);
+  document.getElementById('cow-loan-future').textContent=fmt(loanFuture);
+  document.getElementById('cow-pmt-future').textContent=fmt(pmtFuture)+'/mo';
+
+  const priceDiff=futurePrice-price;
+  const pmtDiff=pmtFuture-pmtNow;
+  const dpDiff=dpFuture-dpNow;
+  document.getElementById('cow-summary').innerHTML=
+    `Waiting ${months} months costs an estimated <strong>${fmt(priceDiff)} more in purchase price</strong>, <strong>${fmt(dpDiff)} more down</strong>, and <strong>${fmt(pmtDiff)} more per month</strong> — that's ${fmt(pmtDiff*360)} over the life of the loan.`;
+
+  document.getElementById('cow-results').classList.add('show');
+}
+</script>
+</body>
+</html>
