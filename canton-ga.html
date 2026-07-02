@@ -365,6 +365,23 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Canton, GA",
+  "description": "Independent mortgage broker serving Canton, GA and Cherokee County. Conventional, FHA, VA, USDA, jumbo, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/canton-ga.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Canton","addressRegion":"GA","postalCode":"30114","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Canton","containedIn":{"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}},
+    {"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -431,21 +448,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Georgia &rsaquo; Canton</div>
-      <span class="eyebrow">Mortgage Broker in Canton, GA</span>
-      <h1 style="margin:14px 0 14px">Canton home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em">Room to grow — local mortgage guidance in Canton and north Cherokee County.</p>
-      <div class="hero-cta">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named canton-hero.jpg into this folder to show downtown Canton here. Dark fallback shows until then. -->
+<div class="city-hero" style="background-image:url('canton-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Georgia</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Canton</span></div>
+    <span class="eyebrow light">Mortgage Broker in Canton, GA</span>
+    <h1>Canton home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">Room to grow — local mortgage guidance in Canton and north Cherokee County.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -454,13 +470,24 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Canton?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Head up I-575 and Canton offers more space and value, with a mix of new construction and established neighborhoods that appeals to families and commuters. It's one of the fastest-growing corners of my home county, and I know it well.</p>
-      <p>Value-minded first-time buyers, families wanting more square footage, and new-construction shoppers fill my Canton pipeline.</p>
-      <div class="areas-row"><strong>Areas I serve in &amp; around Canton</strong><span class="chip">Downtown Canton</span><span class="chip">Hickory Flat</span><span class="chip">BridgeMill</span><span class="chip">Holly Springs</span><span class="chip">Sixes</span></div>
+      <p>Canton is the Cherokee County seat, and it carries a different character than Woodstock to the south. The downtown has genuine history — the old courthouse square, the Cherokee County courthouse, a revitalized Main Street with local restaurants and shops, and a growing arts and events scene anchored by the Canton Theatre. It draws buyers who want more space, more affordability, and more of a small-town feel without leaving the county they already know.</p>
+      <p>The housing market in Canton spans a wide range. Entry-level buyers find more opportunity here than in Woodstock — established neighborhoods in the mid-$200s to mid-$300s are still findable, and that entry point is one of Canton's strongest draws. Move-up buyers have large master-planned communities to choose from, with BridgeMill being one of the biggest names in the area — a sprawling community with a golf course, pool, and tennis courts that has its own gravitational pull on Cherokee County real estate. The Sixes Road corridor and areas around Harmony on the Lakes continue to see new construction and steady appreciation.</p>
+      <p>Canton also has rural pockets, particularly as you move north toward Ball Ground and east toward the county lines, where USDA loan eligibility may apply. Zero-down financing through USDA is one of the most underused tools in Cherokee County, and it's worth checking eligibility on any property before assuming it's off the table.</p>
+      <p>The new-construction market in Canton deserves special mention. Builders have been active here for years, and many buyers encounter builder-preferred lender programs promising incentives. Those incentive packages are worth examining carefully — rate buydowns and closing cost credits sound appealing, but they don't always beat what an independent broker can put together across 45 lenders. I'll compare any builder offer side by side with what I can offer and give you a straight answer.</p>
+      <div class="areas-row">
+        <strong>Neighborhoods &amp; areas I serve in Canton</strong>
+        <span class="chip">Downtown Canton</span>
+        <span class="chip">BridgeMill</span>
+        <span class="chip">Hickory Flat</span>
+        <span class="chip">Sixes Road corridor</span>
+        <span class="chip">Harmony on the Lakes</span>
+        <span class="chip">Holly Springs border</span>
+        <span class="chip">North Canton rural</span>
+        <span class="chip">New construction communities</span>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
@@ -490,6 +517,43 @@ footer ul a:hover{color:var(--brass-soft)}
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Canton mortgage FAQs.</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq">
+        <button>What is the conforming loan limit for Canton, GA? <span class="plus">+</span></button>
+        <div class="ans"><p>Canton is in Cherokee County, a standard-limit county. The 2026 conforming loan limit is $832,750 for a single-unit home. Loans above that amount are considered jumbo loans with different guidelines. Most Canton purchases fall within the conforming limit, which means access to conventional loan programs and competitive rates. If you are looking at higher-end properties in BridgeMill or new construction communities, I can walk you through exactly where the jumbo line kicks in and what changes at that threshold.</p></div>
+      </div>
+
+      <div class="faq">
+        <button>Are there USDA loans available in Canton? <span class="plus">+</span></button>
+        <div class="ans"><p>Potentially yes, in certain areas. While the core of Canton is not USDA-eligible, some rural pockets in and around north Canton and the surrounding areas of Cherokee County do fall within USDA rural development zones. USDA loans allow zero down payment for eligible buyers and properties. I can check eligibility on any specific address — it takes a few minutes and is worth confirming before you assume it is not an option.</p></div>
+      </div>
+
+      <div class="faq">
+        <button>What is the average home price in Canton, GA? <span class="plus">+</span></button>
+        <div class="ans"><p>As of mid-2026, the median sale price in Canton is approximately $440,000, though this varies considerably by neighborhood. Entry-level homes in established areas can be found in the mid-to-high $200s and $300s. Larger homes in BridgeMill and newer communities typically sell in the $400s to $600s. New construction adds inventory at a range of price points depending on builder and location. Canton generally offers more affordability than Woodstock at the entry level, which is a key reason buyers looking to stretch their dollar come here.</p></div>
+      </div>
+
+      <div class="faq">
+        <button>Should I use the builder's lender for new construction in Canton? <span class="plus">+</span></button>
+        <div class="ans"><p>You are never required to. Builder-preferred lender incentives — rate buydowns, closing cost credits — can look attractive but do not always come out ahead once you factor in the full cost of the loan. I will compare any builder financing offer side by side with what I can put together across 45 lenders and give you an honest read on which is actually better for your situation. Many of my Canton clients have saved thousands by shopping independently, even when they ultimately stayed with the builder's program after seeing the comparison.</p></div>
+      </div>
+
+      <div class="faq">
+        <button>How fast can I close on a home in Canton? <span class="plus">+</span></button>
+        <div class="ans"><p>My average clear-to-close time is 12 days. In Canton's active market — especially with new construction where builder timelines matter — speed and reliability from your lender is not a small thing. A pre-approval from a local broker who controls the file from application to closing moves faster and with fewer surprises than routing through a large bank's pipeline. I'm reachable by call and text throughout and handle your file personally.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <!-- ============ FINAL CTA ============ -->
 <section id="start" style="border-top:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
