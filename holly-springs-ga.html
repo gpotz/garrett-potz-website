@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -166,6 +166,32 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<style>
+.city-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;background-color:#160a0a;background-position:center;background-size:cover;background-repeat:no-repeat;color:#fff}
+.city-hero-inner{padding:56px 24px 52px;max-width:var(--maxw);margin:0 auto;width:100%}
+.city-hero .eyebrow.light{color:var(--brass-soft)}
+.city-hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.05;margin:10px 0 14px;max-width:18em}
+.lead-light{color:rgba(255,255,255,.9);font-size:1.12rem;max-width:34em;margin-bottom:26px}
+.btn-ghost-light{border:1px solid rgba(255,255,255,.5);color:#fff;background:transparent}
+.btn-ghost-light:hover{background:rgba(255,255,255,.12)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Holly Springs, GA",
+  "description": "Independent mortgage broker serving Holly Springs, GA and Cherokee County. Conventional, FHA, VA, jumbo, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/holly-springs-ga.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Holly Springs","addressRegion":"GA","postalCode":"30115","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Holly Springs","containedIn":{"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}},
+    {"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -227,21 +253,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em;margin:0 auto;text-align:center">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Georgia &rsaquo; Holly Springs</div>
-      <span class="eyebrow">Mortgage Broker in Holly Springs, GA</span>
-      <h1 style="margin:14px 0 14px">Holly Springs home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em;color:var(--muted);font-size:1.12rem;margin:0 auto 24px">Straightforward mortgage help in one of Cherokee County's fastest-growing cities.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named holly-springs-hero.jpg into this folder to fill the hero. Dark fallback shows until then. -->
+<div class="city-hero" style="background-image:url('holly-springs-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Georgia</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Holly Springs</span></div>
+    <span class="eyebrow light">Mortgage Broker in Holly Springs, GA</span>
+    <h1>Holly Springs home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">Straightforward mortgage help in one of Cherokee County's fastest-growing cities.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -250,21 +275,22 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Holly Springs?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Holly Springs has grown into one of Cherokee County's most sought-after addresses. Sitting just south of Woodstock and north of Canton, the city offers that rare combination of a developing downtown, strong local schools, and neighborhoods that genuinely feel like community. Buyers here range from young families making their first move to established homeowners trading up for more space.</p>
-      <p>The market in Holly Springs is active. Inventory has been tight, and well-priced homes move quickly. That makes your financing just as important as your offer. I work with buyers across Holly Springs and can get a real pre-approval in hand fast so you're not waiting on a lender when the right home comes up.</p>
-      <p>I'm based in Woodstock, just minutes away. Cherokee County is my home turf, and I know the appraisers, the builders, and the market conditions here personally. Whether you're buying your first home with FHA, putting 20% down on a conventional, or qualifying as self-employed, I'll match you to the program that actually fits.</p>
+      <p>Holly Springs has grown into one of Cherokee County's most sought-after addresses. Sitting just south of Woodstock and north of Canton along the I-575 corridor, the city offers that rare combination of a developing downtown, strong local schools, and neighborhoods that genuinely feel like community. What was once a quiet pass-through has become a destination — buyers come specifically for Holly Springs, not just because it is close to something else.</p>
+      <p>The housing market reflects that demand. Entry-level homes start in the mid-to-high $300s, and the move-up segment in the $400s and $500s sees consistent activity from families upgrading for more square footage. New construction has been a significant part of the Holly Springs story, with communities going up along the major corridors and filling in quickly. Inventory stays tight, and well-priced homes move fast — which makes having your financing fully in order before you start looking more important here than in slower markets.</p>
+      <p>Holly Springs also benefits from being tucked between two larger Cherokee County cities without fully absorbing the price premiums of either. Buyers who find Woodstock too competitive and Canton too far north often land here and realize it is exactly what they were looking for — close to everything, without the congestion or the price tag.</p>
+      <p>I'm based in Woodstock, just minutes south. Cherokee County is my daily territory, and I know the appraisers, the builders, and the market conditions here personally. Whether you are buying your first home with FHA, putting 20% down conventional, or qualifying on bank statements as a self-employed borrower, I will match you to the program that actually fits your situation and get you to closing fast.</p>
       <div class="areas-row">
         <strong>Neighborhoods &amp; areas I serve in Holly Springs</strong>
         <span class="chip">Downtown Holly Springs</span>
         <span class="chip">Holly Springs Pkwy corridor</span>
-        <span class="chip">Canton area border</span>
+        <span class="chip">Canton border communities</span>
+        <span class="chip">Woodstock border communities</span>
         <span class="chip">New construction communities</span>
         <span class="chip">Established subdivisions</span>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
