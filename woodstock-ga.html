@@ -365,6 +365,23 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Woodstock, GA",
+  "description": "Independent mortgage broker serving Woodstock, GA and Cherokee County. Conventional, FHA, VA, USDA, jumbo, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/woodstock-ga.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Woodstock","addressRegion":"GA","postalCode":"30188","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Woodstock","containedIn":{"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}},
+    {"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -431,21 +448,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Georgia &rsaquo; Woodstock</div>
-      <span class="eyebrow">Mortgage Broker in Woodstock, GA</span>
-      <h1 style="margin:14px 0 14px">Woodstock home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em">This is home — local mortgage help in Woodstock and across Cherokee County.</p>
-      <div class="hero-cta">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named woodstock-hero.jpg into this folder to fill the hero with a downtown Woodstock photo. Dark fallback shows until then. -->
+<div class="city-hero" style="background-image:url('woodstock-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Georgia</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Woodstock</span></div>
+    <span class="eyebrow light">Mortgage Broker in Woodstock, GA</span>
+    <h1>Woodstock home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">This is home — local mortgage help in Woodstock and across Cherokee County.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -454,13 +470,25 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Woodstock?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Woodstock pairs a lively, growing downtown with established subdivisions and steady new construction, drawing families and professionals who want small-town feel without giving up easy access to the city. I live and work here, so this isn't a market I researched — it's my backyard.</p>
-      <p>First-time buyers, growing families, and downsizers are my bread and butter in Woodstock.</p>
-      <div class="areas-row"><strong>Areas I serve in &amp; around Woodstock</strong><span class="chip">Downtown Woodstock</span><span class="chip">Towne Lake</span><span class="chip">Eagle Watch</span><span class="chip">Deer Run</span><span class="chip">Bradshaw Farm</span></div>
+      <p>Woodstock has earned a reputation most cities spend decades trying to build. National publications have repeatedly named it one of the most livable small cities in America, and anyone who has spent time on Main Street on a weekend evening understands why. The downtown is real — independent restaurants, live music, a farmers market, local shops, and a genuine sense of neighborhood rather than a manufactured district. That authenticity, combined with easy access to I-575 and proximity to Atlanta, is what keeps drawing buyers north.</p>
+      <p>The housing market reflects the demand. Entry-level homes in established neighborhoods like Deer Run and Weatherstone typically start in the low-to-mid $300s. Move-up buyers and growing families tend to land in communities like Towne Lake, Eagle Watch, and Bradshaw Farm, where larger homes on cul-de-sacs and quiet streets sell in the $400s to $600s. New construction continues at the edges of the city, bringing fresh inventory at a range of price points. Cherokee County's relatively lower property tax rates compared to Cobb and Fulton counties are a factor many buyers don't fully appreciate until they run the numbers side by side.</p>
+      <p>Cherokee County Schools serve Woodstock, and the reputation of those schools — particularly at the middle and high school level — is one of the most consistent reasons families cite for choosing this zip code over others in the metro. It drives real purchase decisions and real home prices.</p>
+      <p>I live in Woodstock. I coach here and have been part of this community for years. When I say I know this market, I mean I know which builders are worth working with, which neighborhoods are moving fastest, and which appraisers cover Cherokee County. That context shapes the advice I give. My average clear-to-close time is 12 days — because when you own the process end to end and aren't routing files through a call center, things move.</p>
+      <div class="areas-row">
+        <strong>Neighborhoods &amp; areas I serve in Woodstock</strong>
+        <span class="chip">Downtown Woodstock</span>
+        <span class="chip">Towne Lake</span>
+        <span class="chip">Eagle Watch</span>
+        <span class="chip">Deer Run</span>
+        <span class="chip">Bradshaw Farm</span>
+        <span class="chip">Weatherstone</span>
+        <span class="chip">Ward Estates</span>
+        <span class="chip">Victory Park</span>
+        <span class="chip">New construction communities</span>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
@@ -490,6 +518,43 @@ footer ul a:hover{color:var(--brass-soft)}
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Woodstock mortgage FAQs.</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq">
+        <button>What is the conforming loan limit for Woodstock, GA? <span class="plus">+</span></button>
+        <div class="ans"><p>Woodstock is in Cherokee County, a standard-limit county. The 2026 conforming loan limit is $832,750 for a single-unit home. Loans above that are jumbo loans with different rate and qualification guidelines. The vast majority of Woodstock purchases fall within this limit, which means access to conventional programs and the most competitive rates on the market.</p></div>
+      </div>
+
+      <div class="faq">
+        <button>What is the average home price in Woodstock? <span class="plus">+</span></button>
+        <div class="ans"><p>As of mid-2026, the median sale price in Woodstock is approximately $425,000, though this varies significantly by neighborhood. Entry-level homes in established subdivisions start in the low-to-mid $300s. Larger homes in communities like Towne Lake, Eagle Watch, and Bradshaw Farm typically sell in the $400s to $600s. New construction adds inventory across a wide range of price points. I can walk you through what your budget looks like across different neighborhoods in Cherokee County.</p></div>
+      </div>
+
+      <div class="faq">
+        <button>How much do I need for a down payment to buy in Woodstock? <span class="plus">+</span></button>
+        <div class="ans"><p>It depends on the loan program. VA loans (for eligible veterans and service members) require zero down. USDA loans may be available for qualifying properties in Cherokee County with zero down. FHA loans require 3.5% down, and down payment assistance programs can layer on top to reduce what you bring to closing. Conventional loans go as low as 3% for first-time buyers. I'll run the numbers across every program that fits your situation so you can make an informed choice.</p></div>
+      </div>
+
+      <div class="faq">
+        <button>Can I get a mortgage on new construction in Woodstock? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. New construction is active across Woodstock and Cherokee County, and I work with buyers purchasing from builders throughout the area. Builders have preferred lenders but you are never required to use them. Shopping independently often saves you thousands — and I can compare any builder incentive package against what I can offer so you see the full picture. You deserve a lender who represents your interests, not the builder's.</p></div>
+      </div>
+
+      <div class="faq">
+        <button>How fast can I close on a home in Woodstock? <span class="plus">+</span></button>
+        <div class="ans"><p>My average clear-to-close time is 12 days. In Woodstock's market, where well-priced homes receive multiple offers and sellers have choices, that speed gives your offer real credibility. A pre-approval from a local broker who controls the file from application to clear-to-close moves faster than a loan routed through multiple departments at a big bank. I handle your file personally and am reachable by call and text throughout the process.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <!-- ============ FINAL CTA ============ -->
 <section id="start" style="border-top:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
