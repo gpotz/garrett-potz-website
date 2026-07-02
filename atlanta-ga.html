@@ -365,6 +365,32 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<style>
+.nbhd-chart{margin:40px 0 8px}
+.nbhd-chart .nc-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.nbhd-chart .nc-label{font-family:'Spline Sans Mono',monospace;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);width:130px;flex-shrink:0}
+.nbhd-chart .nc-bar-wrap{flex:1;background:var(--line);border-radius:4px;height:10px;overflow:hidden}
+.nbhd-chart .nc-bar{height:10px;border-radius:4px;background:var(--brass)}
+.nbhd-chart .nc-range{font-size:.82rem;color:var(--muted);white-space:nowrap;width:130px;text-align:right;flex-shrink:0}
+.nbhd-caption{font-size:.78rem;color:var(--muted);margin-top:10px;font-family:'Spline Sans Mono',monospace;letter-spacing:.04em}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Atlanta, GA",
+  "description": "Independent mortgage broker serving Atlanta, GA and the greater metro area. Conventional, FHA, VA, jumbo, DSCR, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/atlanta-ga.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Atlanta","addressRegion":"GA","postalCode":"30301","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Atlanta","containedIn":{"@type":"AdministrativeArea","name":"Fulton County, Georgia"}},
+    {"@type":"AdministrativeArea","name":"Fulton County, Georgia"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -431,21 +457,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Georgia &rsaquo; Atlanta</div>
-      <span class="eyebrow">Mortgage Broker in Atlanta, GA</span>
-      <h1 style="margin:14px 0 14px">Atlanta home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em">Honest, local mortgage guidance for buyers and homeowners across Atlanta's many neighborhoods.</p>
-      <div class="hero-cta">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named atlanta-hero.jpg into this folder to fill the hero. -->
+<div class="city-hero" style="background-image:url('atlanta-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Georgia</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Atlanta</span></div>
+    <span class="eyebrow light">Mortgage Broker in Atlanta, GA</span>
+    <h1>Atlanta home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">One of the most complex mortgage markets in the country. Independent brokerage, 45 lenders, and a broker who handles your file personally.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -454,13 +479,82 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Atlanta?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Atlanta is really a collection of distinct neighborhoods, each with its own character and price point — historic bungalows in one, high-rise condos and new-construction infill in the next. That range is what makes a local broker worth having: the right loan can look completely different from Grant Park to Buckhead.</p>
-      <p>I work with first-time buyers, move-up families, relocating professionals, and investors — including the founders and creatives whose income doesn't fit a simple W-2 box.</p>
-      <div class="areas-row"><strong>Areas I serve in &amp; around Atlanta</strong><span class="chip">Midtown</span><span class="chip">Buckhead</span><span class="chip">West Midtown</span><span class="chip">East Atlanta</span><span class="chip">Grant Park</span><span class="chip">Old Fourth Ward</span><span class="chip">Decatur</span></div>
+      <p>Atlanta is not one housing market. It is thirty of them, stacked against each other across a metro area that stretches from Buckhead to Ball Ground and from Smyrna to Stone Mountain. The city proper contains multifamily towers, bungalow neighborhoods built in the 1920s, new construction infill on former industrial lots, and everything in between. The surrounding counties each have their own character, price points, and buyer profiles. What that means in practice is that the loan strategy for a Midtown condo purchase looks nothing like the loan strategy for a move up single family home in Decatur, which looks nothing like a self employed buyer financing a Buckhead renovation. Atlanta rewards borrowers who work with a lender who understands the market, not one who applies the same template to every file.</p>
+
+      <p>The most important geographic distinction in Atlanta real estate is inside the perimeter versus outside the perimeter. ITP refers to neighborhoods inside Interstate 285, which forms a ring around the city core. These are the intown neighborhoods: Midtown, Buckhead, Virginia Highland, Inman Park, Grant Park, Old Fourth Ward, West Midtown, Reynoldstown, Kirkwood, East Atlanta Village, and Decatur. They command a premium driven by walkability, urban amenity, and limited land supply. Properties here move quickly, appreciate with some consistency, and often draw multiple offers on well priced listings. Outside the perimeter covers the suburban sprawl of Cobb, Cherokee, Gwinnett, Forsyth, and the other surrounding counties where land is more available and price per square foot comes down. Both markets are strong for different reasons and for different buyers.</p>
+
+      <p>Buckhead and Midtown represent the upper end of the intown market and deserve their own discussion. Buckhead is Atlanta's luxury submarket, with single family homes routinely trading in the $800s and above, and high rise condominiums at Phipps Tower, The Residences at W Atlanta, and comparable buildings carrying per unit prices well into the seven figures. Midtown has its own tower market driven by walkability and proximity to Georgia Tech, the arts district, and Piedmont Park. For buyers in these submarkets, jumbo financing is a common requirement. The 2026 conforming limit for Fulton County is $832,750 for a single family home. Purchases above that threshold move into jumbo territory with different underwriting guidelines, higher reserve requirements, and lender options that vary significantly in terms of rate and structure. As an independent broker with access to 45 wholesale lenders, I can shop jumbo financing competitively rather than being locked to one bank's pricing.</p>
+
+      <p>The condo market in Atlanta adds a layer of complexity that catches buyers off guard more than almost any other issue. For a condo to be eligible for conventional or FHA financing, the homeowners association needs to be on an approved list maintained by Fannie Mae or HUD. Many Atlanta condo buildings are not on that list, which makes them what lenders call non warrantable. Non warrantable condos require portfolio lenders or specialty programs, and the rate and terms differ from conventional financing. I check HOA approval status before a buyer goes under contract so they are not blindsided during the transaction. This is one of the most common places Atlanta deals fall apart, and it is entirely preventable with the right due diligence upfront.</p>
+
+      <p>Self employed buyers are a significant part of the Atlanta market, and one where I have particular depth. Atlanta has one of the largest concentrations of Black owned businesses in the country, a growing technology and startup ecosystem centered around the Tech Square corridor, a major film and entertainment industry anchored by Tyler Perry Studios and the dozens of production companies that have followed Georgia's generous tax incentives, and a creative economy that employs a substantial number of freelancers, contractors, and S Corp owners. These buyers share a common problem: their tax returns do not reflect their actual income, because they have structured their finances to minimize taxable income the way any good accountant would advise. A W2 underwriting approach will deny many of them or dramatically understate what they can afford. Bank statement loans, 1099 loans, and P and L programs use actual cash flow rather than adjusted gross income to qualify borrowers. I work with these programs regularly and know how to structure the application to tell the right story to the right lender.</p>
+
+      <p>Investment buyers are another substantial Atlanta buyer profile. The city has strong rental demand driven by population growth, a large renter by choice population of young professionals, and a short term rental market fed by tourism and corporate relocation activity. DSCR loans, which qualify based on the rental income a property generates rather than the borrower's personal income, are a natural fit for Atlanta investment buyers. They allow investors to build portfolios without each new acquisition being underwritten against their personal debt to income ratio. I use this program regularly for Atlanta clients who are growing rental portfolios across Fulton, DeKalb, and surrounding counties.</p>
+
+      <p>Relocating buyers are a constant in the Atlanta market. The city draws corporate relocations, military PCS moves to Fort Gillem and Dobbins Air Reserve Base, healthcare professionals coming for Emory, Grady, and the Piedmont Health system, and a steady stream of people moving from higher cost metros in the Northeast and West Coast who find Atlanta's price to income ratio genuinely favorable. Remote pre approvals, digital closings, and the ability to handle a transaction without the buyer being physically present are all standard in how I operate. If you are coming from out of state and buying in Atlanta, the process does not require you to be here until closing.</p>
+
+      <p>The chart below shows approximate median price ranges across key Atlanta submarkets as of mid 2026. These are general market observations, not appraisals, and individual properties vary significantly from the ranges shown.</p>
+
+      <div class="nbhd-chart reveal">
+        <div class="nc-row">
+          <div class="nc-label">Buckhead</div>
+          <div class="nc-bar-wrap"><div class="nc-bar" style="width:95%"></div></div>
+          <div class="nc-range">$750k &ndash; $1.5M+</div>
+        </div>
+        <div class="nc-row">
+          <div class="nc-label">Midtown</div>
+          <div class="nc-bar-wrap"><div class="nc-bar" style="width:72%"></div></div>
+          <div class="nc-range">$400k &ndash; $900k</div>
+        </div>
+        <div class="nc-row">
+          <div class="nc-label">West Midtown</div>
+          <div class="nc-bar-wrap"><div class="nc-bar" style="width:68%"></div></div>
+          <div class="nc-range">$380k &ndash; $850k</div>
+        </div>
+        <div class="nc-row">
+          <div class="nc-label">Inman Park</div>
+          <div class="nc-bar-wrap"><div class="nc-bar" style="width:65%"></div></div>
+          <div class="nc-range">$500k &ndash; $950k</div>
+        </div>
+        <div class="nc-row">
+          <div class="nc-label">Old Fourth Ward</div>
+          <div class="nc-bar-wrap"><div class="nc-bar" style="width:60%"></div></div>
+          <div class="nc-range">$400k &ndash; $800k</div>
+        </div>
+        <div class="nc-row">
+          <div class="nc-label">Grant Park</div>
+          <div class="nc-bar-wrap"><div class="nc-bar" style="width:52%"></div></div>
+          <div class="nc-range">$350k &ndash; $650k</div>
+        </div>
+        <div class="nc-row">
+          <div class="nc-label">East Atlanta</div>
+          <div class="nc-bar-wrap"><div class="nc-bar" style="width:44%"></div></div>
+          <div class="nc-range">$300k &ndash; $550k</div>
+        </div>
+        <div class="nc-row">
+          <div class="nc-label">Decatur</div>
+          <div class="nc-bar-wrap"><div class="nc-bar" style="width:56%"></div></div>
+          <div class="nc-range">$375k &ndash; $700k</div>
+        </div>
+      </div>
+      <p class="nbhd-caption">Approximate price ranges by submarket, mid 2026. Individual properties vary. Source: market observation.</p>
+
+      <div class="areas-row">
+        <strong>Areas I serve in &amp; around Atlanta</strong>
+        <span class="chip">Midtown</span>
+        <span class="chip">Buckhead</span>
+        <span class="chip">West Midtown</span>
+        <span class="chip">Old Fourth Ward</span>
+        <span class="chip">Inman Park</span>
+        <span class="chip">Grant Park</span>
+        <span class="chip">East Atlanta Village</span>
+        <span class="chip">Decatur</span>
+        <span class="chip">Virginia Highland</span>
+        <span class="chip">Reynoldstown</span>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
@@ -490,6 +584,41 @@ footer ul a:hover{color:var(--brass-soft)}
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Atlanta mortgage FAQs.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq">
+        <button>What is the conforming loan limit in Atlanta? <span class="plus">+</span></button>
+        <div class="ans"><p>Atlanta spans multiple counties. Fulton and DeKalb are standard limit counties with a 2026 conforming limit of $832,750 for a single family home. Purchases above that threshold require jumbo financing. Many Buckhead and Midtown properties exceed the conforming limit, so it is worth discussing upfront whether conventional or jumbo is the right structure for your purchase.</p></div>
+      </div>
+      <div class="faq">
+        <button>Can I get a mortgage on a condo in Midtown or Buckhead? <span class="plus">+</span></button>
+        <div class="ans"><p>Often yes, but the HOA must be on an approved list for conventional and FHA financing. Many Atlanta condo buildings are not approved, making them non warrantable. Non warrantable condos require portfolio or specialty lenders, and the terms differ from conventional financing. I check HOA approval status before you go under contract so you know what you are working with before you are committed.</p></div>
+      </div>
+      <div class="faq">
+        <button>I am self employed. Can I qualify for a mortgage in Atlanta? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. Bank statement loans, 1099 programs, and P and L based loans use your actual cash flow rather than your adjusted gross income to determine what you qualify for. These are programs I work with regularly for Atlanta buyers whose tax returns understate their real income. The right program depends on your business structure and how your income flows through your accounts. Call me and we can figure out the right approach in about ten minutes.</p></div>
+      </div>
+      <div class="faq">
+        <button>Do you offer jumbo loans for higher priced Atlanta homes? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. As an independent broker with access to 45 wholesale lenders, I can shop jumbo pricing across multiple sources rather than being locked to one institution. For Buckhead, Midtown, and other higher priced Atlanta submarkets, that competitive access typically produces better terms than a single bank can offer.</p></div>
+      </div>
+      <div class="faq">
+        <button>Can I buy an Atlanta investment property or short term rental with a DSCR loan? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. DSCR loans qualify based on the rental income a property generates, not your personal income. They are well suited for Atlanta investment buyers building portfolios across Fulton, DeKalb, and surrounding counties. I structure these regularly and can walk you through how they apply to specific properties you are evaluating.</p></div>
+      </div>
+      <div class="faq">
+        <button>I am relocating to Atlanta from out of state. Can you handle my mortgage remotely? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. I handle relocations regularly and the entire process is digital from pre approval through closing. You do not need to be in Atlanta until closing day. Call or text (770) 401-1759 and we can get your pre approval started as soon as you are ready.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ============ FINAL CTA ============ -->
 <section id="start" style="border-top:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
