@@ -328,6 +328,8 @@ footer ul a:hover{color:var(--brass-soft)}
 .bg-stat{display:flex;align-items:baseline;gap:14px;padding:18px 22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r)}
 .bg-stat .num{font-family:'Fraunces',serif;font-weight:700;font-size:1.7rem;color:var(--brass-soft);line-height:1;flex-shrink:0}
 .bg-stat .lbl{font-size:.92rem;color:rgba(255,255,255,.85)}
+#state-ga,#state-fl,#state-al,#state-tn,#state-sc{scroll-margin-top:96px}
+.state-card{cursor:pointer}
 </style>
 <style>.hero.tcenter .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}.hero.tcenter .hero-cta,.hero.tcenter .trust-row,.hero.tcenter .chips{justify-content:center}</style></head>
 <body>
@@ -418,17 +420,17 @@ footer ul a:hover{color:var(--brass-soft)}
       <p>Buying or refinancing anywhere in these states? I can help — and bring the same hands-on service no matter the ZIP code.</p>
     </div>
     <div class="states">
-      <div class="state-card home reveal"><div class="abbr">GA</div><div class="stname">Georgia</div><div class="tagh">Home Base</div></div>
-      <div class="state-card reveal"><div class="abbr">FL</div><div class="stname">Florida</div><div class="tagh">Active Market</div></div>
-      <div class="state-card reveal"><div class="abbr">AL</div><div class="stname">Alabama</div><div class="tagh">Licensed</div></div>
-      <div class="state-card reveal"><div class="abbr">TN</div><div class="stname">Tennessee</div><div class="tagh">Licensed</div></div>
-      <div class="state-card reveal"><div class="abbr">SC</div><div class="stname">South Carolina</div><div class="tagh">Licensed</div></div>
+      <a href="#state-ga" class="state-card home reveal"><div class="abbr">GA</div><div class="stname">Georgia</div><div class="tagh">Home Base</div></a>
+      <a href="#state-fl" class="state-card reveal"><div class="abbr">FL</div><div class="stname">Florida</div><div class="tagh">Active Market</div></a>
+      <a href="#state-al" class="state-card reveal"><div class="abbr">AL</div><div class="stname">Alabama</div><div class="tagh">Licensed</div></a>
+      <a href="#state-tn" class="state-card reveal"><div class="abbr">TN</div><div class="stname">Tennessee</div><div class="tagh">Licensed</div></a>
+      <a href="#state-sc" class="state-card reveal"><div class="abbr">SC</div><div class="stname">South Carolina</div><div class="tagh">Licensed</div></a>
     </div>
   </div>
 </section>
 
 <!-- ============ GEORGIA CORE AREAS ============ -->
-<section style="background:#fffdf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="state-ga" style="background:#fffdf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">My Home Turf</span>
@@ -460,39 +462,97 @@ footer ul a:hover{color:var(--brass-soft)}
   </div>
 </section>
 
-<!-- ============ BEYOND GEORGIA ============ -->
-<section style="background:#fff">
+<!-- ============ FLORIDA ============ -->
+<section id="state-fl" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow">Beyond Georgia</span>
-      <h2>Florida &amp; the wider Southeast.</h2>
-      <p>Relocating, buying a second home, or investing across state lines? Same broker, same straight answers — in four more states.</p>
+      <span class="eyebrow">Florida</span>
+      <h2>Buying or investing in Florida.</h2>
+      <p>Second homes, investment properties, and primary purchases — I serve buyers across Florida with the same hands-on guidance I bring in Georgia. Whether you're buying near Orlando's theme-park corridor or in the Tampa Bay market, I bring 45 lenders and a single point of contact.</p>
     </div>
     <div class="area-grid">
       <div class="area-card reveal">
-        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Florida</div>
-        <div class="ac-note">Orange · Hillsborough Counties</div>
-        <div class="ac-cities"><a href="orlando-fl.html">Orlando</a><a href="tampa-fl.html">Tampa</a><span>second homes &amp; investment</span></div>
+        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Central Florida</div>
+        <div class="ac-note">Orange County</div>
+        <div class="ac-cities"><a href="orlando-fl.html">Orlando</a><span>Kissimmee</span><span>Lake Nona</span><span>Winter Park</span></div>
       </div>
       <div class="area-card reveal">
-        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Tennessee</div>
-        <div class="ac-note">Davidson County</div>
-        <div class="ac-cities"><a href="nashville-tn.html">Nashville</a><span>&amp; Middle TN</span></div>
-      </div>
-      <div class="area-card reveal">
-        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> South Carolina</div>
-        <div class="ac-note">Greenville · Charleston Counties</div>
-        <div class="ac-cities"><a href="greenville-sc.html">Greenville</a><a href="charleston-sc.html">Charleston</a><span>Upstate &amp; Lowcountry</span></div>
-      </div>
-      <div class="area-card reveal">
-        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Alabama</div>
-        <div class="ac-note">Madison County</div>
-        <div class="ac-cities"><a href="huntsville-al.html">Huntsville</a><span>&amp; North Alabama</span></div>
+        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Tampa Bay</div>
+        <div class="ac-note">Hillsborough County</div>
+        <div class="ac-cities"><a href="tampa-fl.html">Tampa</a><span>St. Petersburg</span><span>Brandon</span><span>Wesley Chapel</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============ ALABAMA ============ -->
+<section id="state-al" style="background:#fffdf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Alabama</span>
+      <h2>Licensed in Alabama.</h2>
+      <p>North Alabama has quietly become one of the fastest-growing tech and aerospace corridors in the South. Huntsville leads the way, with a housing market that reflects a city expanding well beyond its original footprint. I'm licensed statewide and bring the full range of programs to Alabama buyers.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-card reveal">
+        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> North Alabama</div>
+        <div class="ac-note">Madison County</div>
+        <div class="ac-cities"><a href="huntsville-al.html">Huntsville</a><span>Madison</span><span>Athens</span><span>Decatur</span></div>
+      </div>
+      <div class="area-card reveal">
+        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Alabama Statewide</div>
+        <div class="ac-note">Licensed across AL</div>
+        <div class="ac-cities"><span>Purchase</span><span>Refinance</span><span>Self-employed</span><span>Investment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TENNESSEE ============ -->
+<section id="state-tn" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Tennessee</span>
+      <h2>Licensed in Tennessee.</h2>
+      <p>Nashville and its surrounding communities have drawn relocating families and remote workers from across the country for years. Whether you're putting down roots in the city or buying in one of the surrounding counties, I offer the same independent broker access and honest guidance I bring everywhere else.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-card reveal">
+        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Middle Tennessee</div>
+        <div class="ac-note">Davidson County</div>
+        <div class="ac-cities"><a href="nashville-tn.html">Nashville</a><span>Brentwood</span><span>Franklin</span><span>Murfreesboro</span></div>
+      </div>
+      <div class="area-card reveal">
+        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Tennessee Statewide</div>
+        <div class="ac-note">Licensed across TN</div>
+        <div class="ac-cities"><span>Purchase</span><span>Refinance</span><span>Self-employed</span><span>Investment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOUTH CAROLINA ============ -->
+<section id="state-sc" style="background:#fffdf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">South Carolina</span>
+      <h2>Licensed in South Carolina.</h2>
+      <p>South Carolina offers two distinct markets — the growing Upstate centered around Greenville, and the historic coastal Lowcountry anchored by Charleston. Both are drawing buyers from across the country. Same broker, same straight answers, in both.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-card reveal">
+        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Upstate South Carolina</div>
+        <div class="ac-note">Greenville County</div>
+        <div class="ac-cities"><a href="greenville-sc.html">Greenville</a><span>Spartanburg</span><span>Anderson</span><span>Greer</span></div>
+      </div>
+      <div class="area-card reveal">
+        <div class="ac-county"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lowcountry</div>
+        <div class="ac-note">Charleston County</div>
+        <div class="ac-cities"><a href="charleston-sc.html">Charleston</a><span>Mount Pleasant</span><span>North Charleston</span><span>Summerville</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ============ WHY LOCAL ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line)">
   <div class="wrap">
