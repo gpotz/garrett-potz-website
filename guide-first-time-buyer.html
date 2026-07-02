@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mortgage Guides | Garrett Potz — Affinity Home Lending</title>
-<meta name="description" content="Detailed mortgage guides for self employed and business owner buyers, first time buyers, investors, and homeowners refinancing, written by mortgage broker Garrett Potz.">
+<title>First Time Homebuyer Guide | Garrett Potz</title>
+<meta name="description" content="A plain language first time homebuyer guide covering down payments, credit, loan programs, and the buying process, explained by mortgage broker Garrett Potz.">
 
 <!--
   ============================================================
@@ -334,18 +334,31 @@ footer ul a:hover{color:var(--brass-soft)}
 .serving .nmls{font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:var(--muted);margin-top:12px;line-height:1.5}
 </style>
 <style>.hero.tcenter .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}.hero.tcenter .hero-cta,.hero.tcenter .trust-row,.hero.tcenter .chips{justify-content:center}
-/* ---- Guides grid ---- */
-.gcards{max-width:64em;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
-.gcard{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px 26px 24px;transition:border-color .15s,transform .15s,box-shadow .15s;text-decoration:none}
-a.gcard:hover{border-color:var(--brass);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.06)}
-.gcard .tag{align-self:flex-start;font-family:'Spline Sans Mono',monospace;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--brass);background:#fbeaea;border:1px solid #f1d4d4;padding:4px 10px;border-radius:999px;margin-bottom:14px}
-.gcard h3{font-size:1.26rem;margin:0 0 10px;color:var(--ink)}
-.gcard p{color:var(--muted);font-size:.95rem;line-height:1.6;margin:0 0 16px}
-.gcard .more{margin-top:auto;font-weight:600;color:var(--brass);font-size:.93rem}
-.gcard.soon{opacity:1}
-.gcard.soon .tag{color:var(--muted);background:var(--cream);border-color:var(--line)}
-.gcard.soon .more{color:var(--muted)}
-</style></head>
+/* ---- Article ---- */
+.article{max-width:44em;margin:0 auto}
+.article .meta-line{color:var(--muted);font-size:.84rem;margin-bottom:10px;font-family:'Spline Sans Mono',monospace;letter-spacing:.04em;text-transform:uppercase}
+.article h2{font-size:1.55rem;margin:36px 0 12px}
+.article h3{font-size:1.18rem;margin:26px 0 8px}
+.article p{color:var(--ink);line-height:1.78;margin:0 0 16px;font-size:1.05rem}
+.article ul{margin:0 0 18px;padding:0;list-style:none}
+.article ul li{position:relative;padding-left:26px;margin-bottom:9px;line-height:1.6;font-size:1.03rem}
+.article ul li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--brass);font-weight:700}
+.article .callout{background:#fbf7f7;border-left:3px solid var(--brass);border-radius:0 10px 10px 0;padding:16px 20px;margin:26px 0}
+.article .callout p{margin:0;font-size:1.01rem}
+.article .lead-in{font-size:1.16rem;color:var(--muted);line-height:1.7;margin-bottom:22px}
+.backlink{display:inline-block;margin-bottom:16px;font-size:.9rem;color:var(--brass);font-weight:600}
+.disc{max-width:44em;margin:30px auto 0;font-size:.82rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);padding-top:18px}
+<style>
+.gchart{margin:32px 0 8px}
+.gchart .gc-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.gchart .gc-label{font-family:'Spline Sans Mono',monospace;font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);width:110px;flex-shrink:0}
+.gchart .gc-bar-wrap{flex:1;background:var(--line);border-radius:4px;height:10px;overflow:hidden}
+.gchart .gc-bar{height:10px;border-radius:4px;background:var(--brass)}
+.gchart .gc-value{font-size:.82rem;color:var(--muted);white-space:nowrap;width:230px;text-align:right;flex-shrink:0}
+.gchart-caption{font-size:.78rem;color:var(--muted);margin-top:10px;font-family:'Spline Sans Mono',monospace;letter-spacing:.04em;line-height:1.5}
+@media(max-width:640px){.gchart .gc-row{flex-wrap:wrap}.gchart .gc-label{width:100%}.gchart .gc-bar-wrap{order:3;width:100%;flex-basis:100%}.gchart .gc-value{width:auto}}
+</style>
+</head>
 <body>
 
 <!-- ============ NAV ============ -->
@@ -410,64 +423,108 @@ a.gcard:hover{border-color:var(--brass);transform:translateY(-3px);box-shadow:0 
 
 <a id="top"></a>
 
-<!-- ============ HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:46px 0 36px;border-bottom:1px solid var(--line)">
+<!-- ============ ARTICLE ============ -->
+<section class="hero tcenter" style="background:#fff;padding:44px 0 26px;border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <div class="reveal" style="max-width:50em">
-      <span class="eyebrow">Learn Before You Borrow</span>
-      <h1 style="margin:14px 0 16px">Mortgage <mark>guides &amp; scenarios</mark>.</h1>
-      <p class="lead" style="max-width:40em">Real strategies, real numbers, real programs, not generic advice. Each guide walks through a specific situation so you know exactly what is possible and what to expect. Heavy on the stuff most lenders will not take the time to explain, including self employed income, creative financing, and the programs that actually fit business owners.</p>
+    <div class="reveal" style="max-width:46em">
+      <a class="backlink" href="guides.html">← All Guides</a>
+      <span class="eyebrow">First Time Buyers</span>
+      <h1 style="margin:12px 0 14px;font-size:clamp(2rem,4.5vw,2.9rem)">Buying your first home? Here is exactly what to expect.</h1>
+      <p class="lead" style="max-width:40em">Nobody hands you an instruction manual for this. Here is the plain version of everything you actually need to know before you buy your first home, written the way I would explain it to you sitting across the table.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ GUIDE GRID ============ -->
 <section style="background:#fff">
   <div class="wrap">
-    <div class="gcards reveal">
+    <div class="article reveal">
+      <p class="meta-line">Guide · First Time Buyers</p>
 
-      <a class="gcard" href="guide-self-employed.html">
-        <span class="tag">Self Employed</span>
-        <h3>Self Employed and Business Owner Mortgages</h3>
-        <p>Bank statement loans, 1099 programs, profit and loss qualification, and rental income based financing. Real options for freelancers, contractors, and owners whose tax returns do not tell the whole story. This is my specialty.</p>
-        <span class="more">Read the guide →</span>
-      </a>
+      <p class="lead-in">If this is your first time buying a home, you are probably carrying around a list of half answered questions. How much do you actually need saved. Does your credit have to be perfect. What happens after you make an offer. None of it is complicated once someone walks you through it in order, so that is what we are going to do here.</p>
 
-      <a class="gcard" href="guide-first-time-buyer.html">
-        <span class="tag">First Time Buyers</span>
-        <h3>First Time Homebuyer Guide</h3>
-        <p>Conventional and government backed loans compared, down payment myths, credit, and the full process from pre approval to keys, plus the common mistakes that trip first time buyers up.</p>
-        <span class="more">Read the guide →</span>
-      </a>
+      <h2>The three things that actually decide what you qualify for</h2>
+      <p>Every mortgage decision comes down to three things working together. How much you are putting down. How your credit history looks. And how much of your monthly income is already committed to other payments, such as a car loan, student loans, or credit cards. None of these three numbers has to be perfect on its own. Lenders look at the whole picture, and a strength in one area can make up for a weaker number somewhere else. This is exactly why two people with very different financial situations can both end up qualifying for a loan on the very same house.</p>
 
-      <a class="gcard" href="guide-investor.html">
-        <span class="tag">Investing</span>
-        <h3>Real Estate Investor Guide</h3>
-        <p>Rental income based loans, conventional investment financing, and how to scale a rental portfolio, including options that qualify on the property's own cash flow instead of your personal income.</p>
-        <span class="more">Read the guide →</span>
-      </a>
+      <h2>How much you really need for a down payment</h2>
+      <p>The idea that you need twenty percent down to buy a home is one of the most expensive myths in real estate, because it talks people out of buying years before they actually needed to wait. Conventional loans allow as little as three percent down for qualified buyers. A loan backed by the Federal Housing Administration allows three and a half percent down. If you have served in the military, a loan backed by the Department of Veterans Affairs can let you buy with nothing down at all. The chart below shows what that actually looks like in real dollars on an example home, so you can see how different the true number is from the twenty percent myth most people are still carrying around in their head.</p>
 
-      <a class="gcard" href="guide-refinance.html">
-        <span class="tag">Refinancing</span>
-        <h3>Mortgage Refinance Guide</h3>
-        <p>Rate and term refinancing, cash out refinancing, and when a refinance actually saves you money. The break even math, the real costs, and the mistakes to avoid before you move forward.</p>
-        <span class="more">Read the guide →</span>
-      </a>
+      <div class="gchart reveal">
+        <div class="gc-row">
+          <div class="gc-label">3 percent</div>
+          <div class="gc-bar-wrap"><div class="gc-bar" style="width:15%"></div></div>
+          <div class="gc-value">$12,000 down on a $400,000 home</div>
+        </div>
+        <div class="gc-row">
+          <div class="gc-label">3.5 percent</div>
+          <div class="gc-bar-wrap"><div class="gc-bar" style="width:17.5%"></div></div>
+          <div class="gc-value">$14,000 down on a $400,000 home</div>
+        </div>
+        <div class="gc-row">
+          <div class="gc-label">5 percent</div>
+          <div class="gc-bar-wrap"><div class="gc-bar" style="width:25%"></div></div>
+          <div class="gc-value">$20,000 down on a $400,000 home</div>
+        </div>
+        <div class="gc-row">
+          <div class="gc-label">10 percent</div>
+          <div class="gc-bar-wrap"><div class="gc-bar" style="width:50%"></div></div>
+          <div class="gc-value">$40,000 down on a $400,000 home</div>
+        </div>
+        <div class="gc-row">
+          <div class="gc-label">20 percent</div>
+          <div class="gc-bar-wrap"><div class="gc-bar" style="width:100%"></div></div>
+          <div class="gc-value">$80,000 down on a $400,000 home</div>
+        </div>
+      </div>
+      <p class="gchart-caption">Example based on a $400,000 home price used for illustration only. Your actual down payment depends on the loan program you qualify for and the price of the home you choose. This is not a quote.</p>
 
-      <a class="gcard" href="guide-home-equity.html">
-        <span class="tag">Equity</span>
-        <h3>Home Equity and Cash Out Guide</h3>
-        <p>Home equity lines of credit, home equity loans, cash out refinancing, and renovation financing. Which option fits your goal, and when each one actually makes sense.</p>
-        <span class="more">Read the guide →</span>
-      </a>
+      <h2>The loan programs available to you, explained simply</h2>
 
-      <a class="gcard" href="guide-reverse-mortgage.html">
-        <span class="tag">Reverse</span>
-        <h3>Reverse Mortgage Guide</h3>
-        <p>How a reverse mortgage works for homeowners sixty two and older, what it costs, how it gets repaid, and the honest pros and cons, so you or your parents can decide with clear eyes.</p>
-        <span class="more">Read the guide →</span>
-      </a>
+      <h3>Conventional loans</h3>
+      <p>A conventional loan is not backed by a government agency. It typically asks for a slightly stronger credit history than the government backed programs, but it can come with a lower monthly cost once your down payment is large enough to remove the mortgage insurance requirement over time.</p>
 
+      <h3>Loans backed by the Federal Housing Administration</h3>
+      <p>These loans are backed by the government and built specifically to make homeownership more reachable for buyers with a smaller down payment or a shorter credit history. The tradeoff is that mortgage insurance stays part of the payment for most of the life of the loan, so it is worth comparing both paths before you decide.</p>
+
+      <h3>Loans backed by the Department of Veterans Affairs</h3>
+      <p>If you are an eligible veteran, an active service member, or a surviving spouse, this is usually the strongest loan available to you. It allows a purchase with nothing down and does not require monthly mortgage insurance at all.</p>
+
+      <h3>Loans backed by the United States Department of Agriculture</h3>
+      <p>In eligible rural and some suburban areas, this program allows qualified buyers to purchase a home with nothing down. Eligibility depends on the location of the property and your household income, so it takes a quick check together to confirm whether it applies to you.</p>
+
+      <h2>What your credit actually needs to look like</h2>
+      <p>You do not need flawless credit to buy a home. Most loan programs have room for a wide range of credit histories, and the piece that matters most is often not your score itself but the story your recent payment history tells. Paying everything on time in the months leading up to your purchase matters more than chasing a perfect number. If you are carrying balances on credit cards, paying them down before you apply can help more than almost anything else you could do in the short term.</p>
+
+      <div class="callout">
+        <p><strong>The point:</strong> the biggest myth in this entire process is that you need perfect credit and a large pile of cash before anyone will take you seriously. Most buyers qualify with far less than they assumed, and the only way to know your real number is to actually run it.</p>
+      </div>
+
+      <h2>The homebuying process, from start to finish</h2>
+      <ul>
+        <li>Get pre approved so you know your real budget before you start looking at homes</li>
+        <li>Work with a real estate agent to find homes in your range</li>
+        <li>Make an offer and negotiate the terms with the seller</li>
+        <li>Schedule a home inspection so you know the true condition of the property</li>
+        <li>The lender orders an appraisal to confirm the home is worth what you agreed to pay</li>
+        <li>Your file moves through underwriting while the lender verifies your documents</li>
+        <li>You sign the final paperwork and get the keys at closing</li>
+      </ul>
+
+      <h2>Mistakes that slow first time buyers down</h2>
+      <ul>
+        <li>Shopping for homes before talking to a lender, which leads to falling in love with a house you cannot actually afford</li>
+        <li>Changing jobs or making a large purchase like a car in the middle of the process</li>
+        <li>Moving money around or making large unexplained deposits right before applying</li>
+        <li>Only thinking about the sale price and forgetting property taxes, insurance, and any homeowner association dues that come with the monthly payment</li>
+      </ul>
+
+      <h2>Let us find out what you actually qualify for</h2>
+      <p>The only way to really answer any of these questions is to run your actual numbers, and that conversation usually takes about ten minutes. Reach out and we will walk through exactly where you stand today and what it would take to get you into a home.</p>
+
+      <div style="text-align:center;margin:28px 0 6px">
+        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <p class="disc">This guide is general education, not a commitment to lend or an offer of credit. Program availability, terms, and qualification guidelines vary by lender and can change, and all loans are subject to underwriting approval. For guidance specific to your situation, reach out directly. Garrett Potz, NMLS #631592 · Affinity Home Lending, Company NMLS #1181151 · Equal Housing Lender.</p>
     </div>
   </div>
 </section>
@@ -476,15 +533,14 @@ a.gcard:hover{border-color:var(--brass);transform:translateY(-3px);box-shadow:0 
 <section id="start" style="background:#fffdf8;border-top:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
     <div class="reveal" style="max-width:42em;margin:0 auto">
-      <span class="eyebrow">Not Sure Where to Start?</span>
-      <h2 style="margin:12px 0 14px">Tell me your situation — I'll point you the right way.</h2>
-      <p style="color:var(--muted);margin-bottom:26px">No pressure, no obligation. Just a clear picture of your options from a broker who'll actually take the time.</p>
+      <span class="eyebrow">First Time Buyers Welcome</span>
+      <h2 style="margin:12px 0 14px">Ready to find out what you qualify for?</h2>
+      <p style="color:var(--muted);margin-bottom:26px">I walk first time buyers through this every week, and I will give you a straight answer about where you stand today.</p>
       <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
       <p style="margin-top:24px;font-size:.95rem;color:var(--muted)">&#128222; <a href="tel:+17704011759" style="color:var(--brass);font-weight:600">(770) 401-1759</a> &nbsp;&middot;&nbsp; &#9993; <a href="mailto:gpotz@affinityhomelending.com" style="color:var(--brass);font-weight:600">gpotz@affinityhomelending.com</a></p>
     </div>
   </div>
 </section>
-
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
