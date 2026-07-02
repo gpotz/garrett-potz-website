@@ -365,6 +365,23 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Marietta, GA",
+  "description": "Independent mortgage broker serving Marietta, East Cobb, and West Cobb. Conventional, FHA, VA, jumbo, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/marietta-ga.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Marietta","addressRegion":"GA","postalCode":"30060","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Marietta","containedIn":{"@type":"AdministrativeArea","name":"Cobb County, Georgia"}},
+    {"@type":"AdministrativeArea","name":"Cobb County, Georgia"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -431,21 +448,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Georgia &rsaquo; Marietta</div>
-      <span class="eyebrow">Mortgage Broker in Marietta, GA</span>
-      <h1 style="margin:14px 0 14px">Marietta home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em">Local lending for Marietta and East/West Cobb — my single largest market.</p>
-      <div class="hero-cta">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named marietta-hero.jpg into this folder to fill the hero. -->
+<div class="city-hero" style="background-image:url('marietta-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Georgia</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Marietta</span></div>
+    <span class="eyebrow light">Mortgage Broker in Marietta, GA</span>
+    <h1>Marietta home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">My home market — East Cobb, West Cobb, the Square, and everywhere in between.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -454,13 +470,22 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Marietta?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Marietta blends a walkable historic square with established neighborhoods and some of the metro's most sought-after schools, which is exactly why it's where I close the most loans. Inventory moves fast here, and a strong, local pre-approval can be the difference in a competitive offer.</p>
-      <p>Growing families, move-up buyers, and first-timers priced out of Atlanta proper make up most of my Marietta clients.</p>
-      <div class="areas-row"><strong>Areas I serve in &amp; around Marietta</strong><span class="chip">Marietta Square</span><span class="chip">East Cobb</span><span class="chip">West Cobb</span><span class="chip">Kennesaw Mountain</span><span class="chip">Sprayberry</span></div>
+      <p>Marietta is where I close more loans than anywhere else — and it's not a coincidence that it's also where I live and work. The city has a range that most suburbs don't: a walkable historic square with restaurants and local shops, established neighborhoods with real character, and some of the most sought-after school districts in metro Atlanta. Whether you're drawn to Marietta Square, a quiet street in East Cobb, or an established neighborhood on the west side, the city holds something for almost every buyer profile.</p>
+      <p>East Cobb and West Cobb are distinct markets that happen to share a zip code boundary. East Cobb tends to carry higher price points — particularly in the neighborhoods closest to the top-rated schools — with homes regularly trading in the $500s to $800s and plenty pushing past $1 million. West Cobb offers more entry-level opportunity, with solid neighborhoods in the $300s and $400s that attract first-time buyers and those relocating from higher-cost markets. Knowing which side of that line you're on shapes the loan strategy from the start.</p>
+      <p>Marietta moves fast. When good inventory hits in a desirable neighborhood, multiple offers in the first weekend are common, not the exception. A pre-approval that's actually been through underwriting — not just a soft pull — is what gives your offer weight in that environment. I run a thorough pre-approval so that when you find the house, the only question is the price, not whether the financing will hold.</p>
+      <p>This is my home territory. I know the neighborhoods, I know the price ranges, and I know what lenders want to see on a Cobb County purchase. If you're buying, refinancing, or pulling cash out of a Marietta property, I'll bring the same attention to your deal that I'd want on my own.</p>
+      <div class="areas-row">
+        <strong>Areas I serve in &amp; around Marietta</strong>
+        <span class="chip">Marietta Square</span>
+        <span class="chip">East Cobb</span>
+        <span class="chip">West Cobb</span>
+        <span class="chip">Kennesaw Mountain area</span>
+        <span class="chip">Sprayberry</span>
+        <span class="chip">Johnson Ferry corridor</span>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
