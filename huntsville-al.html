@@ -365,6 +365,23 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Huntsville, AL",
+  "description": "Alabama licensed mortgage broker serving Huntsville and Madison County. Relocation, VA, new construction, conventional, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/huntsville-al.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Huntsville","addressRegion":"AL","postalCode":"35801","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Huntsville","containedIn":{"@type":"AdministrativeArea","name":"Madison County, Alabama"}},
+    {"@type":"AdministrativeArea","name":"Madison County, Alabama"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -431,21 +448,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Alabama &rsaquo; Huntsville</div>
-      <span class="eyebrow">Mortgage Broker in Huntsville, AL</span>
-      <h1 style="margin:14px 0 14px">Huntsville home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em">Alabama-licensed lending for Huntsville's engineers, families, and newcomers.</p>
-      <div class="hero-cta">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named huntsville-hero.jpg into this folder to fill the hero. -->
+<div class="city-hero" style="background-image:url('huntsville-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Alabama</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Huntsville</span></div>
+    <span class="eyebrow light">Mortgage Broker in Huntsville, AL</span>
+    <h1>Huntsville home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">Rocket City relocations, Redstone VA loans, and new construction done honestly. Alabama's boomtown deserves a broker who keeps up.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -454,13 +470,23 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Huntsville?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Huntsville's aerospace and tech economy has made it one of the South's fastest-growing and most affordable mid-size markets, with steady demand and plenty of new construction. Relocations here are constant, and the value is hard to beat.</p>
-      <p>Relocating engineers and defense professionals, first-time buyers, and new-construction shoppers are my typical Huntsville clients.</p>
-      <div class="areas-row"><strong>Areas I serve in &amp; around Huntsville</strong><span class="chip">Downtown Huntsville</span><span class="chip">Madison</span><span class="chip">Hampton Cove</span><span class="chip">Providence</span><span class="chip">Jones Valley</span></div>
+      <p>Huntsville is now Alabama's largest city, and it earned the title the modern way: by building things the rest of the country needs. The aerospace and defense economy anchored by Redstone Arsenal, Cummings Research Park, and a deep bench of contractors has produced year after year of job growth, and the housing market has grown with it. Engineers, scientists, and program managers relocate here constantly from higher cost metros, and they find a market where a median sale price around $350,000 buys what a starter condo costs where they came from. Growth has pushed well past the city's original footprint, with Madison, Athens, and the surrounding communities absorbing wave after wave of new construction.</p>
+      <p>Relocation is the signature Huntsville transaction, and I have built my process around it. Pre approval, underwriting, and closing prep all run digitally, so your financing is finished before the moving truck is loaded. Many of my Huntsville clients accept an offer letter in one state and close on a home in another without an extra trip in between. If you are coming on a defense contract or a federal position, I understand how that income reads to an underwriter and how to document it cleanly.</p>
+      <p>Redstone Arsenal also makes Huntsville a serious VA market. Service members, veterans, and the large retired military community here can use VA financing with zero down payment and no monthly mortgage insurance, and at Huntsville prices that produces house payments that genuinely beat rent. New construction is the other pillar of this market, and it comes with the standard caution: builder lender incentives are often priced into a higher rate. I put the builder's offer next to the open market and tell you honestly which one wins.</p>
+      <p>First time buyers are served by FHA and conventional programs with low down payments, move up families are trading into Hampton Cove and Jones Valley, and investors work the steady rental demand that a growing tech workforce guarantees, with DSCR loans qualifying properties on their own income. Wherever you fit, the process starts with a ten minute call.</p>
+      <div class="areas-row">
+        <strong>Areas I serve in &amp; around Huntsville</strong>
+        <span class="chip">Downtown Huntsville</span>
+        <span class="chip">Madison</span>
+        <span class="chip">Hampton Cove</span>
+        <span class="chip">Jones Valley</span>
+        <span class="chip">Providence</span>
+        <span class="chip">Athens</span>
+        <span class="chip">Decatur</span>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
@@ -468,7 +494,7 @@ footer ul a:hover{color:var(--brass-soft)}
       <span class="eyebrow">Loan Options</span>
       <h2>Financing that fits Huntsville.</h2>
     </div>
-    <p class="angle">Huntsville runs on relocation and new construction. I make out-of-state moves smooth, show you whether the builder's lender is really your best deal, and line up FHA, VA, and conventional for first-time and move-up buyers.</p>
+    <p class="angle">Huntsville runs on relocation and new construction. I make out of state moves smooth, show you whether the builder's lender is really your best deal, and line up FHA, VA, and conventional for first time and move up buyers.</p>
     <div class="prog-chips"><a href="loan-options.html">Conventional</a><a href="loan-options.html">FHA &amp; VA</a><a href="loan-options.html">Jumbo</a><a href="loan-options.html">Bank Statement</a><a href="loan-options.html">DSCR Investor</a></div>
     <a href="loan-options.html" class="btn btn-primary">See All Loan Options</a>
   </div>
@@ -482,21 +508,52 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Huntsville by the numbers.</h2>
     </div>
     <div class="snap-grid">
-      <div class="snap reveal"><div class="snap-k">Median sale price</div><div class="snap-v accent">~$310,000</div><div class="snap-sub">Madison County &middot; as of mid-2026</div></div>
+      <div class="snap reveal"><div class="snap-k">Median sale price</div><div class="snap-v accent">~$350,000</div><div class="snap-sub">Madison County &middot; as of mid-2026</div></div>
       <div class="snap reveal"><div class="snap-k">2026 conforming limit</div><div class="snap-v">$832,750</div><div class="snap-sub">Loans above this are &ldquo;jumbo&rdquo; &middot; FHFA</div></div>
-      <div class="snap reveal"><div class="snap-k">Region</div><div class="snap-v" style="font-size:1.5rem">North Alabama</div><div class="snap-sub">Relocation · New build · First-time</div></div>
+      <div class="snap reveal"><div class="snap-k">Region</div><div class="snap-v" style="font-size:1.5rem">North Alabama</div><div class="snap-sub">Relocation · New build · VA</div></div>
     </div>
     <p class="snap-disc">Market figures are approximate and change over time — for current Huntsville data, see <a href="https://www.redfin.com/city/9408/AL/Huntsville/housing-market" target="_blank" rel="noopener">Redfin</a>. The $832,750 figure is the 2026 baseline conforming loan limit for one-unit homes (Madison County is a standard-limit county; source: FHFA). This is general information, not a rate quote or loan commitment.</p>
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Huntsville mortgage FAQs.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq">
+        <button>I am relocating to Huntsville for a defense job. When should I start? <span class="plus">+</span></button>
+        <div class="ans"><p>As soon as you have the offer letter. Contract and federal income documents in specific ways, and I know how underwriters read them. The entire process runs remotely, and most of my Huntsville relocation clients have financing fully approved before they arrive.</p></div>
+      </div>
+      <div class="faq">
+        <button>How does a VA loan work in Huntsville? <span class="plus">+</span></button>
+        <div class="ans"><p>VA loans offer zero down payment, no monthly mortgage insurance, and competitive rates for eligible service members, veterans, and surviving spouses. Huntsville's large active and retired military community around Redstone Arsenal uses VA constantly, and at local prices the payments genuinely beat rent.</p></div>
+      </div>
+      <div class="faq">
+        <button>Should I use the builder's lender for new construction in Huntsville or Madison? <span class="plus">+</span></button>
+        <div class="ans"><p>Compare first. Builder incentives are often priced into a higher rate that costs more over the life of the loan than the credits save at closing. I put the builder's offer and the open market side by side and give you an honest answer either way.</p></div>
+      </div>
+      <div class="faq">
+        <button>What is the conforming loan limit in Huntsville? <span class="plus">+</span></button>
+        <div class="ans"><p>Madison County is a standard limit county, so the 2026 conforming limit is $832,750 for a single family home. Nearly all Huntsville purchases fall comfortably under it, keeping the full range of conventional options open.</p></div>
+      </div>
+      <div class="faq">
+        <button>Can I buy a Huntsville rental property with a DSCR loan? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. DSCR loans qualify on the rental income the property produces, and Huntsville's growing workforce keeps rental demand dependable. Call or text (770) 401-1759 and we can run the numbers together.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ============ FINAL CTA ============ -->
 <section id="start" style="border-top:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
     <div class="reveal" style="max-width:40em;margin:0 auto">
       <span class="eyebrow">Get Started</span>
       <h2 style="margin:12px 0 14px">Ready to buy in Huntsville?</h2>
-      <p style="color:var(--muted);margin-bottom:26px">Let's find the loan that actually fits your situation — a real pre-approval from a local broker who answers the phone.</p>
+      <p style="color:var(--muted);margin-bottom:26px">Let's find the right loan for Huntsville. Relocation, VA, or new construction. A real pre approval from a broker who answers the phone.</p>
       <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Pre-Approved</a>
       <p style="margin-top:24px;font-size:.95rem;color:var(--muted)">&#128222; <a href="tel:+17704011759" style="color:var(--brass);font-weight:600">(770) 401-1759</a> &nbsp;&middot;&nbsp; &#9993; <a href="mailto:gpotz@affinityhomelending.com" style="color:var(--brass);font-weight:600">gpotz@affinityhomelending.com</a></p>
     </div>
