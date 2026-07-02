@@ -365,6 +365,23 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Orlando, FL",
+  "description": "Florida licensed mortgage broker serving Orlando and Orange County. First time buyer, second home, DSCR investor, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/orlando-fl.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32801","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Orlando","containedIn":{"@type":"AdministrativeArea","name":"Orange County, Florida"}},
+    {"@type":"AdministrativeArea","name":"Orange County, Florida"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -431,21 +448,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Florida &rsaquo; Orlando</div>
-      <span class="eyebrow">Mortgage Broker in Orlando, FL</span>
-      <h1 style="margin:14px 0 14px">Orlando home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em">Florida-licensed lending for Orlando buyers, investors, and second-home owners.</p>
-      <div class="hero-cta">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named orlando-hero.jpg into this folder to fill the hero. -->
+<div class="city-hero" style="background-image:url('orlando-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Florida</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Orlando</span></div>
+    <span class="eyebrow light">Mortgage Broker in Orlando, FL</span>
+    <h1>Orlando home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">First homes, second homes, and investment properties near the parks. Florida licensed lending built around what you are actually buying.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -454,13 +470,23 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Orlando?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Orlando's market spans family suburbs, downtown condos, and one of the country's strongest vacation- and investment-home segments, thanks to its theme-park-driven economy. Whether it's a primary residence or a rental near the parks, the financing approach changes a lot.</p>
-      <p>Relocating families, investors, and short-term-rental and second-home buyers make up most of my Orlando clients.</p>
-      <div class="areas-row"><strong>Areas I serve in &amp; around Orlando</strong><span class="chip">Lake Nona</span><span class="chip">Winter Park</span><span class="chip">Dr. Phillips</span><span class="chip">Baldwin Park</span><span class="chip">Windermere</span></div>
+      <p>Orlando is best known for its theme park economy, but the housing market runs much deeper than tourism. Lake Nona has grown into a major medical and technology hub that draws healthcare professionals and researchers from around the country. Downtown and the surrounding urban neighborhoods have a growing condo and townhome market. And the family suburbs, from Winter Park and Baldwin Park to Dr. Phillips and Windermere, cover everything from starter homes to luxury lakefront estates. Orlando remains one of the more accessible major metros in Florida, which keeps first time buyers, relocating families, and investors all active in the same market.</p>
+      <p>For first time buyers, Orlando is one of the friendlier big city markets in the state. FHA financing allows down payments as low as 3.5 percent, and conventional programs start at 3 percent down for qualified buyers. The suburbs east and north of the city offer solid entry level inventory, and I walk first time buyers through the full cost picture, including taxes, insurance, and HOA dues, so the monthly payment is never a surprise.</p>
+      <p>The vacation home and investment market around Orlando deserves its own conversation because the financing rules change based on what you are buying and how you will use it. A second home you visit several times a year finances differently than a property you intend to rent to vacationers. Short term rental communities are heavily concentrated southwest of the city toward Kissimmee and Davenport, where zoning permits nightly rentals. DSCR loans qualify these properties on the rental income they generate rather than your personal tax returns, which makes them the natural tool for investors building near the parks. Before you write an offer, I confirm the community actually permits the rental strategy you have in mind, because that single detail determines which financing works.</p>
+      <p>Self employed buyers and out of state purchasers are a regular part of my Orlando business. Bank statement and 1099 programs qualify business owners on real cash flow rather than adjusted gross income, and the entire loan process runs digitally from pre approval through closing. If you are buying in Orlando from another state, you do not need to be in Florida until closing day.</p>
+      <div class="areas-row">
+        <strong>Areas I serve in &amp; around Orlando</strong>
+        <span class="chip">Lake Nona</span>
+        <span class="chip">Winter Park</span>
+        <span class="chip">Baldwin Park</span>
+        <span class="chip">Dr. Phillips</span>
+        <span class="chip">Windermere</span>
+        <span class="chip">Kissimmee</span>
+        <span class="chip">Davenport</span>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
@@ -468,7 +494,7 @@ footer ul a:hover{color:var(--brass-soft)}
       <span class="eyebrow">Loan Options</span>
       <h2>Financing that fits Orlando.</h2>
     </div>
-    <p class="angle">Orlando is prime second-home and investment territory. DSCR loans qualify rentals on their own income, and I handle relocation and second-home financing for buyers coming from out of state.</p>
+    <p class="angle">Orlando is prime second home and investment territory. DSCR loans qualify rentals on their own income, and I handle relocation and second home financing for buyers coming from out of state.</p>
     <div class="prog-chips"><a href="loan-options.html">Conventional</a><a href="loan-options.html">FHA &amp; VA</a><a href="loan-options.html">Jumbo</a><a href="loan-options.html">Bank Statement</a><a href="loan-options.html">DSCR Investor</a></div>
     <a href="loan-options.html" class="btn btn-primary">See All Loan Options</a>
   </div>
@@ -490,13 +516,44 @@ footer ul a:hover{color:var(--brass-soft)}
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Orlando mortgage FAQs.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq">
+        <button>What is the conforming loan limit in Orlando? <span class="plus">+</span></button>
+        <div class="ans"><p>Orlando is in Orange County, a standard limit county. The 2026 conforming loan limit is $832,750 for a single family home. Most Orlando purchases fall well under that, keeping conventional financing available, though luxury properties in Windermere and lakefront markets can move into jumbo territory.</p></div>
+      </div>
+      <div class="faq">
+        <button>Can I finance a vacation rental near the Orlando parks? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes, with the right structure. Short term rental communities are concentrated toward Kissimmee and Davenport where zoning permits nightly rentals. DSCR loans qualify the property on its rental income rather than your tax returns. Before you go under contract, I confirm the community permits short term rentals, because that detail determines which financing applies.</p></div>
+      </div>
+      <div class="faq">
+        <button>What is the difference between second home and investment financing? <span class="plus">+</span></button>
+        <div class="ans"><p>A second home is for your own use, requires as little as 10 percent down, and carries rates close to primary residence pricing, but it cannot be run as a rental business. An investment property can be rented freely but requires more down and carries slightly higher rates. Using the wrong one is a compliance problem, so I make sure your loan matches your actual plan for the property.</p></div>
+      </div>
+      <div class="faq">
+        <button>I am a first time buyer in Orlando. How much do I need down? <span class="plus">+</span></button>
+        <div class="ans"><p>Less than most people think. FHA allows 3.5 percent down and conventional programs start at 3 percent for qualified buyers. Down payment is usually not the real barrier. Understanding the full monthly payment with taxes, insurance, and HOA dues is where I focus first with Orlando buyers.</p></div>
+      </div>
+      <div class="faq">
+        <button>Can you handle my Orlando purchase if I live out of state? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. Second home and investment purchases from out of state buyers are a regular part of my Orlando business. The process is fully digital and you do not need to be in Florida until closing day. Call or text (770) 401-1759 to get started.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ============ FINAL CTA ============ -->
 <section id="start" style="border-top:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
     <div class="reveal" style="max-width:40em;margin:0 auto">
       <span class="eyebrow">Get Started</span>
       <h2 style="margin:12px 0 14px">Ready to buy in Orlando?</h2>
-      <p style="color:var(--muted);margin-bottom:26px">Let's find the loan that actually fits your situation — a real pre-approval from a local broker who answers the phone.</p>
+      <p style="color:var(--muted);margin-bottom:26px">Let's find the right loan for Orlando. Primary, second home, or investment. A real pre approval from a broker who knows the difference.</p>
       <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Pre-Approved</a>
       <p style="margin-top:24px;font-size:.95rem;color:var(--muted)">&#128222; <a href="tel:+17704011759" style="color:var(--brass);font-weight:600">(770) 401-1759</a> &nbsp;&middot;&nbsp; &#9993; <a href="mailto:gpotz@affinityhomelending.com" style="color:var(--brass);font-weight:600">gpotz@affinityhomelending.com</a></p>
     </div>

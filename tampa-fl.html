@@ -365,6 +365,23 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Tampa, FL",
+  "description": "Florida licensed mortgage broker serving Tampa and Hillsborough County. Conventional, FHA, VA, jumbo, DSCR, and self-employed loan programs for relocating buyers and investors.",
+  "url": "https://www.garrettpotz.com/tampa-fl.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Tampa","addressRegion":"FL","postalCode":"33602","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Tampa","containedIn":{"@type":"AdministrativeArea","name":"Hillsborough County, Florida"}},
+    {"@type":"AdministrativeArea","name":"Hillsborough County, Florida"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -431,21 +448,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Florida &rsaquo; Tampa</div>
-      <span class="eyebrow">Mortgage Broker in Tampa, FL</span>
-      <h1 style="margin:14px 0 14px">Tampa home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em">Florida-licensed lending across Tampa Bay's waterfront and suburbs.</p>
-      <div class="hero-cta">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named tampa-hero.jpg into this folder to fill the hero. -->
+<div class="city-hero" style="background-image:url('tampa-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Florida</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Tampa</span></div>
+    <span class="eyebrow light">Mortgage Broker in Tampa, FL</span>
+    <h1>Tampa home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">Relocation buyers, MacDill families, waterfront jumbo, and investors. Tampa Bay lending with one point of contact from start to close.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -454,13 +470,23 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Tampa?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Tampa Bay pairs waterfront living with fast-growing suburbs and a booming job market, making it a magnet for relocating professionals and investors alike. Price points range widely, from starter suburbs to luxury waterfront.</p>
-      <p>Relocating professionals, move-up families, and investors are my typical Tampa clients.</p>
-      <div class="areas-row"><strong>Areas I serve in &amp; around Tampa</strong><span class="chip">South Tampa</span><span class="chip">Westchase</span><span class="chip">Channelside</span><span class="chip">Brandon</span><span class="chip">New Tampa</span></div>
+      <p>Tampa is one of the strongest relocation markets in the country, and it has been for years. The combination of a diversified job market, no state income tax, year round weather, and housing that still costs meaningfully less than South Florida keeps a steady stream of buyers arriving from the Northeast, the Midwest, and the West Coast. The market they find when they get here is genuinely varied. South Tampa neighborhoods like Hyde Park and Palma Ceia carry a premium for their walkability and character. Westchase and New Tampa offer established suburban family living. And the growth corridor running north through Wesley Chapel and Land O Lakes delivers newer construction at price points that surprise buyers coming from more expensive metros.</p>
+      <p>Waterfront property is a defining feature of Tampa Bay real estate, and it comes with a financing consideration buyers should understand early. Homes in designated flood zones require flood insurance as a condition of the mortgage, and that premium affects your debt to income calculation and your monthly payment. It is not a reason to avoid waterfront. It is a number that belongs in your budget from day one rather than a surprise during underwriting. I flag flood zone status early in the process so the full cost picture is clear before you write an offer.</p>
+      <p>MacDill Air Force Base makes Tampa a significant VA lending market. Service members and veterans buying in Tampa can use VA financing with zero down payment, no monthly mortgage insurance, and competitive rates. I handle VA purchases regularly, understand the timelines that come with a PCS move, and can run the entire process remotely so your loan is ready when you arrive. If you are separating from service or retiring in Tampa, VA remains available to you as well.</p>
+      <p>Investors and self employed buyers round out the Tampa picture. Rental demand across the metro is strong, and DSCR loans let investors qualify on the rental income the property generates rather than their personal tax returns. For self employed buyers and business owners, bank statement and 1099 programs use actual cash flow instead of adjusted gross income. Whatever your situation, the process is fully digital from pre approval through closing, and you do not need to be in Florida until closing day.</p>
+      <div class="areas-row">
+        <strong>Areas I serve in &amp; around Tampa</strong>
+        <span class="chip">South Tampa</span>
+        <span class="chip">Hyde Park</span>
+        <span class="chip">Westchase</span>
+        <span class="chip">New Tampa</span>
+        <span class="chip">Wesley Chapel</span>
+        <span class="chip">Brandon</span>
+        <span class="chip">Channelside</span>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
@@ -468,7 +494,7 @@ footer ul a:hover{color:var(--brass-soft)}
       <span class="eyebrow">Loan Options</span>
       <h2>Financing that fits Tampa.</h2>
     </div>
-    <p class="angle">From jumbo financing for waterfront homes to investor and DSCR options for rentals, I structure Tampa loans around your goals — and guide out-of-state buyers through a smooth relocation.</p>
+    <p class="angle">From jumbo financing for waterfront homes to DSCR options for rentals, I structure Tampa loans around your goals and guide out of state buyers through a smooth relocation.</p>
     <div class="prog-chips"><a href="loan-options.html">Conventional</a><a href="loan-options.html">FHA &amp; VA</a><a href="loan-options.html">Jumbo</a><a href="loan-options.html">Bank Statement</a><a href="loan-options.html">DSCR Investor</a></div>
     <a href="loan-options.html" class="btn btn-primary">See All Loan Options</a>
   </div>
@@ -482,7 +508,7 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Tampa by the numbers.</h2>
     </div>
     <div class="snap-grid">
-      <div class="snap reveal"><div class="snap-k">Median sale price</div><div class="snap-v accent">~$415,000</div><div class="snap-sub">Hillsborough County &middot; as of mid-2026</div></div>
+      <div class="snap reveal"><div class="snap-k">Median sale price</div><div class="snap-v accent">~$443,000</div><div class="snap-sub">Hillsborough County &middot; as of mid-2026</div></div>
       <div class="snap reveal"><div class="snap-k">2026 conforming limit</div><div class="snap-v">$832,750</div><div class="snap-sub">Loans above this are &ldquo;jumbo&rdquo; &middot; FHFA</div></div>
       <div class="snap reveal"><div class="snap-k">Region</div><div class="snap-v" style="font-size:1.5rem">Tampa Bay</div><div class="snap-sub">Relocation · Jumbo · Investment</div></div>
     </div>
@@ -490,13 +516,44 @@ footer ul a:hover{color:var(--brass-soft)}
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Tampa mortgage FAQs.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq">
+        <button>What is the conforming loan limit in Tampa? <span class="plus">+</span></button>
+        <div class="ans"><p>Tampa is in Hillsborough County, a standard limit county. The 2026 conforming loan limit is $832,750 for a single family home. Purchases above that move into jumbo financing, which is common for South Tampa and waterfront properties. I shop jumbo pricing across multiple lenders rather than being tied to one bank.</p></div>
+      </div>
+      <div class="faq">
+        <button>I am stationed at MacDill. Can I use a VA loan in Tampa? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. VA financing offers zero down payment, no monthly mortgage insurance, and competitive rates. I handle VA purchases for MacDill families regularly and understand PCS timelines. The entire process can run remotely so your financing is ready when you arrive in Tampa.</p></div>
+      </div>
+      <div class="faq">
+        <button>How does flood insurance affect my Tampa mortgage? <span class="plus">+</span></button>
+        <div class="ans"><p>If the home sits in a designated flood zone, the lender requires flood insurance, and the premium counts in your debt to income calculation. It does not disqualify the property. It is simply a cost that needs to be in your budget from the start. I check flood zone status early so there are no surprises in underwriting.</p></div>
+      </div>
+      <div class="faq">
+        <button>Can I buy a Tampa investment property with a DSCR loan? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. DSCR loans qualify based on the rental income the property generates rather than your personal income. Tampa rental demand is strong across the metro, and I structure these loans regularly for investors building portfolios in the Tampa Bay area.</p></div>
+      </div>
+      <div class="faq">
+        <button>I am relocating to Tampa from out of state. Can you handle everything remotely? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. Relocations are a core part of my Tampa business. Pre approval, underwriting, and closing prep all happen digitally, and you do not need to be in Florida until closing day. Call or text (770) 401-1759 to get started before your move.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ============ FINAL CTA ============ -->
 <section id="start" style="border-top:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
     <div class="reveal" style="max-width:40em;margin:0 auto">
       <span class="eyebrow">Get Started</span>
       <h2 style="margin:12px 0 14px">Ready to buy in Tampa?</h2>
-      <p style="color:var(--muted);margin-bottom:26px">Let's find the loan that actually fits your situation — a real pre-approval from a local broker who answers the phone.</p>
+      <p style="color:var(--muted);margin-bottom:26px">Let's find the right loan for Tampa Bay. A real pre approval from a broker who handles Florida relocations every week.</p>
       <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Pre-Approved</a>
       <p style="margin-top:24px;font-size:.95rem;color:var(--muted)">&#128222; <a href="tel:+17704011759" style="color:var(--brass);font-weight:600">(770) 401-1759</a> &nbsp;&middot;&nbsp; &#9993; <a href="mailto:gpotz@affinityhomelending.com" style="color:var(--brass);font-weight:600">gpotz@affinityhomelending.com</a></p>
     </div>
