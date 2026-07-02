@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -166,6 +166,32 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<style>
+.city-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;background-color:#160a0a;background-position:center;background-size:cover;background-repeat:no-repeat;color:#fff}
+.city-hero-inner{padding:56px 24px 52px;max-width:var(--maxw);margin:0 auto;width:100%}
+.city-hero .eyebrow.light{color:var(--brass-soft)}
+.city-hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.05;margin:10px 0 14px;max-width:18em}
+.lead-light{color:rgba(255,255,255,.9);font-size:1.12rem;max-width:34em;margin-bottom:26px}
+.btn-ghost-light{border:1px solid rgba(255,255,255,.5);color:#fff;background:transparent}
+.btn-ghost-light:hover{background:rgba(255,255,255,.12)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Ball Ground, GA",
+  "description": "Independent mortgage broker serving Ball Ground, GA and Cherokee County. Conventional, FHA, VA, USDA, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/ball-ground-ga.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Ball Ground","addressRegion":"GA","postalCode":"30107","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Ball Ground","containedIn":{"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}},
+    {"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -227,21 +253,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em;margin:0 auto;text-align:center">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Georgia &rsaquo; Ball Ground</div>
-      <span class="eyebrow">Mortgage Broker in Ball Ground, GA</span>
-      <h1 style="margin:14px 0 14px">Ball Ground home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em;color:var(--muted);font-size:1.12rem;margin:0 auto 24px">Small-town character, real mortgage guidance — right here in northern Cherokee County.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named ball-ground-hero.jpg into this folder to fill the hero. Dark fallback shows until then. -->
+<div class="city-hero" style="background-image:url('ball-ground-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Georgia</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Ball Ground</span></div>
+    <span class="eyebrow light">Mortgage Broker in Ball Ground, GA</span>
+    <h1>Ball Ground home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">Small-town character, real mortgage guidance — right here in northern Cherokee County.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -250,9 +275,10 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Ball Ground?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Ball Ground sits in northern Cherokee County with a character you don't find just anywhere. The historic downtown has real roots, and the surrounding area still holds onto that small-town feel even as new development pushes north from Canton and Woodstock. If you're drawn to Ball Ground, you probably already know what makes it different from the rest of the suburbs.</p>
-      <p>Buyers here are a varied group. Some are looking for an affordable entry point into Cherokee County without the price tags you see closer to Woodstock. Others are putting down roots in a place they've already been part of for years. A few are investors or buyers looking for properties with land. The common thread is that they want a lender who actually understands the market they're buying into.</p>
-      <p>I'm based in Woodstock, just south of Ball Ground, and I've worked with buyers across Cherokee County for years. Whether you're looking at an established property in or near downtown, new construction on the outskirts, or something with acreage, I'll put together financing that actually fits. USDA loans may be available in some areas around Ball Ground for buyers who qualify, which can mean zero down payment.</p>
+      <p>Ball Ground sits in northern Cherokee County with a character you don't find just anywhere. The historic downtown has real roots — antique shops, local businesses, and a main street that hasn't been bulldozed and rebuilt into something generic. The Etowah River runs nearby, and the surrounding land still holds onto the rolling, wooded feel of north Georgia even as development pushes steadily north from Canton and Woodstock. If you're drawn to Ball Ground, you already know what makes it different.</p>
+      <p>The housing market here reflects that character. Ball Ground remains one of the more affordable entry points in Cherokee County, with established homes in the mid-$200s to mid-$300s that give first-time buyers genuine options without stretching to the edges of the market. At the same time, new construction has been coming — larger communities on the outskirts of town that bring move-up buyers and growing families who want more acreage and more breathing room than the suburbs closer to Atlanta can offer.</p>
+      <p>One program worth knowing about in Ball Ground: USDA Rural Development loans. Some areas in and around Ball Ground fall within USDA-eligible rural zones, which can mean zero down payment for buyers who qualify on income. It is one of the most underused programs in Cherokee County, and checking eligibility on a specific property takes minutes. I run that check for every Ball Ground buyer before assuming it is off the table.</p>
+      <p>I'm based in Woodstock, just south on 575. Cherokee County is my daily territory, and that includes the northern end of the county where Ball Ground sits. Whether you're looking at a downtown property, a newer subdivision on the outskirts, or a home with acreage, I know the lenders who handle each property type well and I'll put together financing that actually fits.</p>
       <div class="areas-row">
         <strong>Areas I serve in &amp; around Ball Ground</strong>
         <span class="chip">Ball Ground downtown</span>
@@ -260,11 +286,11 @@ footer ul a:hover{color:var(--brass-soft)}
         <span class="chip">Northern Cherokee County</span>
         <span class="chip">Rural and acreage properties</span>
         <span class="chip">New construction communities</span>
+        <span class="chip">Canton border</span>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
