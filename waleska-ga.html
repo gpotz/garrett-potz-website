@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -166,6 +166,32 @@ footer ul a:hover{color:var(--brass-soft)}
 .snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
 .snap-disc a{color:var(--brass)}
 </style>
+<style>
+.city-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;background-color:#160a0a;background-position:center;background-size:cover;background-repeat:no-repeat;color:#fff}
+.city-hero-inner{padding:56px 24px 52px;max-width:var(--maxw);margin:0 auto;width:100%}
+.city-hero .eyebrow.light{color:var(--brass-soft)}
+.city-hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.05;margin:10px 0 14px;max-width:18em}
+.lead-light{color:rgba(255,255,255,.9);font-size:1.12rem;max-width:34em;margin-bottom:26px}
+.btn-ghost-light{border:1px solid rgba(255,255,255,.5);color:#fff;background:transparent}
+.btn-ghost-light:hover{background:rgba(255,255,255,.12)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Waleska, GA",
+  "description": "Independent mortgage broker serving Waleska, GA, Lake Arrowhead, and Cherokee County. Conventional, FHA, VA, USDA, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/waleska-ga.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Waleska","addressRegion":"GA","postalCode":"30183","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Waleska","containedIn":{"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}},
+    {"@type":"AdministrativeArea","name":"Cherokee County, Georgia"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
 </head>
 <body>
 
@@ -227,21 +253,20 @@ footer ul a:hover{color:var(--brass-soft)}
 <a id="top"></a>
 
 <!-- ============ CITY HERO ============ -->
-<section class="hero tcenter" style="background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="reveal" style="max-width:48em;margin:0 auto;text-align:center">
-      <div class="crumb"><a href="locations.html">Locations</a> &rsaquo; Georgia &rsaquo; Waleska</div>
-      <span class="eyebrow">Mortgage Broker in Waleska, GA</span>
-      <h1 style="margin:14px 0 14px">Waleska home loans, <mark>done right</mark>.</h1>
-      <p class="lead" style="max-width:38em;color:var(--muted);font-size:1.12rem;margin:0 auto 24px">Rural character, lakefront community, and real mortgage guidance — deep in Cherokee County.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
-        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
-        <a href="sms:+17704011759" class="btn btn-ghost">Call or Text (770) 401-1759</a>
-      </div>
+<!-- PHOTO: drop a file named waleska-hero.jpg into this folder to fill the hero. Dark fallback shows until then. -->
+<div class="city-hero" style="background-image:url('waleska-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Georgia</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Waleska</span></div>
+    <span class="eyebrow light">Mortgage Broker in Waleska, GA</span>
+    <h1>Waleska home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">Lake Arrowhead, rural land, and everything in between — financed with a broker who knows the territory.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
     </div>
   </div>
-</section>
-
+</div>
 <!-- ============ ABOUT THIS MARKET ============ -->
 <section style="background:#fff">
   <div class="wrap">
@@ -250,21 +275,22 @@ footer ul a:hover{color:var(--brass-soft)}
       <h2>Buying or refinancing in Waleska?</h2>
     </div>
     <div class="city-copy reveal">
-      <p>Waleska is one of Cherokee County's most distinctive communities. It's home to Reinhardt University and anchored by Lake Arrowhead, a private gated community built around a 540-acre lake. The result is a market that doesn't look much like the rest of the county. Buyers here range from families drawn to the lakefront lifestyle to rural property buyers looking for land, privacy, and space to breathe.</p>
-      <p>Lake Arrowhead properties carry their own character — waterfront homes, lake-access lots, and wooded properties within a private community with amenities. Standard loan programs apply in most cases, though properties in gated communities with HOAs do require a few additional steps in the financing process. I've worked through those scenarios before and know what to expect.</p>
-      <p>Outside Lake Arrowhead, Waleska is largely rural. That opens the door to USDA loans in many areas, which can mean zero down payment for eligible buyers. Whether you're looking at a modest home near Reinhardt, acreage with a house, or a lakefront property inside Lake Arrowhead, I'll match you to the right program and walk you through the details so nothing is a surprise.</p>
+      <p>Waleska is one of Cherokee County's most distinctive communities — and one of the most interesting markets to finance. The town is anchored by two things that set it apart from every other city in the county: Reinhardt University and Lake Arrowhead. Lake Arrowhead alone is a 2,600-acre private gated community built around a 540-acre lake with shoreline homes, wooded lots, golf, tennis, and a level of amenity you'd expect from a resort. The result is a market that doesn't look much like anywhere else in Cherokee County, and one that rewards working with a lender who already knows the lay of the land.</p>
+      <p>Lake Arrowhead properties carry their own character and their own financing considerations. Waterfront homes and lake-access lots tend to command a premium, and properties inside a private gated community with HOA fees require a few extra steps in the approval process — including HOA documentation and, in some cases, condo questionnaires for certain building types. None of that is a dealbreaker, but it does mean you want a lender who has seen this before and knows exactly what to order and when. I've financed Lake Arrowhead properties and the process doesn't surprise me.</p>
+      <p>Outside the gate, Waleska is largely rural Cherokee County. That opens the door to USDA Rural Development loans in many areas — a zero-down option that is one of the most underused programs in north Georgia. USDA eligibility is tied to the specific property address, not a general area, so checking it on your target home takes minutes and can change the math entirely for buyers who qualify on income. I run that check on every Waleska property outside Lake Arrowhead before assuming it's off the table.</p>
+      <p>Whether you're looking at a lakefront home inside Lake Arrowhead, a rural property with acreage, or a more modest home near Reinhardt University, I'll map out the right loan program and walk you through the details before anything is a surprise. I'm based in Woodstock and Cherokee County is my territory — Waleska included.</p>
       <div class="areas-row">
         <strong>Areas I serve in &amp; around Waleska</strong>
         <span class="chip">Lake Arrowhead</span>
+        <span class="chip">Lakefront &amp; lake-access homes</span>
         <span class="chip">Reinhardt University area</span>
         <span class="chip">Rural Cherokee County</span>
         <span class="chip">Acreage properties</span>
-        <span class="chip">Lakefront &amp; lake-access</span>
+        <span class="chip">Gated community financing</span>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ============ LOAN OPTIONS ============ -->
 <section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap" style="text-align:center">
