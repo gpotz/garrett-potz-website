@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jumbo Mortgage Broker in Naples, FL | Garrett Potz — Affinity Home Lending</title>
+<meta name="description" content="Florida licensed mortgage broker serving Naples and Collier County. Jumbo, luxury, second home, and golf community financing shopped across 45 lenders. Call or text (770) 401-1759.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pine:#161616;
+  --pine-deep:#0a0a0a;
+  --brass:#850000;
+  --brass-soft:#d64545;
+  --cream:#f6f5f5;
+  --paper:#ffffff;
+  --ink:#141414;
+  --muted:#5d5d5d;
+  --line:#e4e4e6;
+  --maxw:1140px;
+  --r:14px;
+  --shadow:0 18px 50px -28px rgba(20,40,30,.45);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+.eyebrow{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:.72rem;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--brass);
+}
+
+mark{
+  background:linear-gradient(180deg,transparent 58%,rgba(133,0,0,.18) 58%);
+  color:inherit;padding:0 .05em;
+}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.5em;
+  font-weight:600;font-size:.95rem;
+  padding:14px 26px;border-radius:10px;
+  transition:transform .15s ease,box-shadow .2s ease,background .2s ease;
+  cursor:pointer;border:0;
+}
+.btn-primary{background:var(--brass);color:#fff;box-shadow:0 10px 24px -12px rgba(133,0,0,.45)}
+.btn-primary:hover{background:var(--brass-soft);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--pine);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--pine);background:rgba(29,59,50,.04)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;min-height:84px;padding:4px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:auto;height:84px;flex-shrink:0;object-fit:contain;background:#fff;border-radius:6px;padding:2px;}
+.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;line-height:1.1}
+.brand-sub{font-size:.7rem;color:var(--muted);font-family:'Spline Sans Mono',monospace;letter-spacing:.05em}
+.nav-links{display:flex;align-items:center;gap:22px;font-size:.9rem;font-weight:500}
+.nav-links > a{color:var(--muted);transition:color .15s;white-space:nowrap}
+.nav-links > a:hover{color:var(--pine)}
+.dropdown{position:relative}
+.dropdown > button{
+  display:inline-flex;align-items:center;gap:5px;background:none;border:0;cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:.9rem;font-weight:500;color:var(--muted);transition:color .15s;
+}
+.dropdown > button:hover,.dropdown:focus-within > button{color:var(--pine)}
+.dropdown > button .caret{font-size:.62rem;transition:transform .2s}
+.dropdown:hover > button .caret,.dropdown:focus-within > button .caret{transform:rotate(180deg)}
+.dropdown-menu{
+  position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(6px);
+  background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);padding:8px;min-width:230px;
+  display:flex;flex-direction:column;gap:2px;
+  opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease;z-index:60;
+}
+.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown-menu a{padding:10px 14px;border-radius:8px;font-size:.9rem;color:var(--ink);transition:background .12s,color .12s}
+.dropdown-menu a:hover{background:rgba(133,0,0,.06);color:var(--brass)}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-call{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:.9rem;color:var(--brass);background:rgba(133,0,0,.08);border:1.5px solid rgba(133,0,0,.28);border-radius:10px;padding:9px 15px;white-space:nowrap;transition:background .15s,color .15s,border-color .15s}.nav-call:hover{background:var(--brass);color:#fff;border-color:var(--brass)}
+.menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--pine);cursor:pointer}
+@media(max-width:1080px){
+  .nav-links{display:none}
+  .nav-call .nav-call-txt{display:none}.nav-call{padding:9px 11px;gap:0}
+  .menu-btn{display:block}
+}
+.mobile-menu .mm-group{font-family:'Spline Sans Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);padding:14px 0 4px;border-bottom:0}
+.mobile-menu .mm-sub{padding-left:16px}
+
+section{padding:84px 0}
+.sec-head{max-width:42em;margin-bottom:48px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{margin:12px 0 16px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+.faq-list{max-width:760px;margin:0 auto}
+.faq{border-bottom:1px solid var(--line)}
+.faq button{width:100%;background:none;border:0;text-align:left;padding:24px 0;font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.faq button .plus{flex-shrink:0;color:var(--brass);font-size:1.4rem;transition:transform .25s;font-family:'Inter',sans-serif}
+.faq.open button .plus{transform:rotate(45deg)}
+.faq .ans{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq .ans p{padding:0 0 24px;color:var(--muted);font-size:.98rem}
+
+footer{background:var(--pine-deep);color:rgba(255,255,255,.72);padding:64px 0 32px;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-brand .brand-name{color:#fff}
+.foot-brand p{margin:16px 0;max-width:30em;font-size:.88rem;line-height:1.6}
+.foot-nmls{font-family:'Spline Sans Mono',monospace;font-size:.78rem;color:var(--brass-soft)}
+footer h5{color:#fff;font-family:'Inter';font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+footer ul a{color:rgba(255,255,255,.72);transition:color .15s}
+footer ul a:hover{color:var(--brass-soft)}
+.eho{display:flex;gap:10px;align-items:center;margin-top:18px;font-size:.78rem;color:rgba(255,255,255,.6)}
+.eho .ehologo{width:30px;height:30px;border:1.5px solid rgba(255,255,255,.4);border-radius:6px;display:grid;place-items:center;font-size:1rem}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.7}
+@media(max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:480px){.foot-grid{grid-template-columns:1fr}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+.mobile-menu{display:none;flex-direction:column;gap:4px;padding:12px 24px 20px;border-bottom:1px solid var(--line);background:var(--cream)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:10px 0;color:var(--ink);font-weight:500;border-bottom:1px solid var(--line)}
+.social-row{display:flex;gap:14px;margin-top:16px}.social-row a{color:rgba(255,255,255,.55);display:inline-flex;transition:color .15s,transform .15s}.social-row a:hover{color:var(--brass-soft);transform:translateY(-2px)}.ehl-logo{height:54px;width:auto;float:left;margin:2px 16px 8px 0;color:rgba(255,255,255,.78)}.foot-bottom a{color:rgba(255,255,255,.7);text-decoration:underline}.foot-bottom a:hover{color:var(--brass-soft)}
+</style>
+<style>
+.crumb{font-family:'Spline Sans Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.crumb a{color:var(--muted)}
+.crumb a:hover{color:var(--brass)}
+.city-copy{max-width:46em;margin:0 auto}
+.city-copy p{font-size:1.06rem;color:var(--ink);margin-bottom:16px;line-height:1.7}
+.areas-row{max-width:46em;margin:26px auto 0;font-size:.95rem;color:var(--muted)}
+.areas-row strong{color:var(--ink);display:block;margin-bottom:10px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-family:'Spline Sans Mono',monospace}
+.chip{display:inline-block;font-size:.85rem;color:var(--muted);background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:5px 12px;margin:0 6px 8px 0}
+.angle{max-width:44em;color:var(--muted);font-size:1.06rem;line-height:1.7;margin:0 auto 24px;text-align:center}
+.prog-chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px;justify-content:center}
+.prog-chips a{font-size:.9rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 16px;transition:border-color .15s,color .15s}
+.prog-chips a:hover{border-color:var(--brass);color:var(--brass)}
+.snap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:60em;margin:0 auto}
+@media(max-width:680px){.snap-grid{grid-template-columns:1fr}}
+.snap{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px;text-align:center}
+.snap-k{font-family:'Spline Sans Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.snap-v{font-family:'Fraunces',serif;font-size:2rem;color:var(--ink);margin:8px 0 6px;line-height:1.05}
+.snap-v.accent{color:var(--brass)}
+.snap-sub{font-size:.8rem;color:var(--muted);line-height:1.45}
+.snap-disc{max-width:52em;margin:26px auto 0;text-align:center;font-size:.79rem;color:var(--muted);line-height:1.6}
+.snap-disc a{color:var(--brass)}
+</style>
+<style>
+.city-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;background-color:#160a0a;background-position:center;background-size:cover;background-repeat:no-repeat;color:#fff}
+.city-hero-inner{padding:56px 24px 52px;max-width:var(--maxw);margin:0 auto;width:100%}
+.city-hero .eyebrow.light{color:var(--brass-soft)}
+.city-hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.05;margin:10px 0 14px;max-width:18em}
+.lead-light{color:rgba(255,255,255,.9);font-size:1.12rem;max-width:34em;margin-bottom:26px}
+.btn-ghost-light{border:1px solid rgba(255,255,255,.5);color:#fff;background:transparent}
+.btn-ghost-light:hover{background:rgba(255,255,255,.12)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","FinancialService"],
+  "name": "Garrett Potz — Mortgage Broker in Naples, FL",
+  "description": "Florida licensed mortgage broker serving Naples and Collier County. Jumbo, second home, condo, golf community, and self-employed loan programs.",
+  "url": "https://www.garrettpotz.com/naples-fl.html",
+  "telephone": "+17704011759",
+  "email": "gpotz@affinityhomelending.com",
+  "address": {"@type":"PostalAddress","addressLocality":"Naples","addressRegion":"FL","postalCode":"34102","addressCountry":"US"},
+  "areaServed": [
+    {"@type":"City","name":"Naples","containedIn":{"@type":"AdministrativeArea","name":"Collier County, Florida"}},
+    {"@type":"AdministrativeArea","name":"Collier County, Florida"}
+  ],
+  "sameAs": ["https://www.facebook.com/garrettpotz","https://www.linkedin.com/in/garrettpotz/","https://www.nmlsconsumeraccess.org/"]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand">
+        <img src="affinity-logo.png" alt="Affinity Home Lending" class="brand-mark">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="loan-options.html">Loan Options</a>
+        <a href="locations.html" style="color:var(--pine);font-weight:600">Locations</a>
+        <a href="guides.html">Guides</a>
+        <div class="dropdown">
+          <button>Tools <span class="caret">▼</span></button>
+          <div class="dropdown-menu">
+            <a href="calculator.html">Mortgage Calculator</a>
+            <a href="rent-vs-buy.html">Rent vs. Buy</a>
+            <a href="affordability.html">Affordability Calculator</a>
+            <a href="home-value.html">Home Value Estimator</a>
+            <a href="second-opinion.html">Second Opinion</a>
+            <a href="roadmap.html">Mortgage Roadmap</a>
+            <a href="realtor-partners.html">Realtors</a>
+          </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:+17704011759" class="nav-call" aria-label="Call or text (770) 401-1759" title="Call or text (770) 401-1759"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="nav-call-txt">Call</span></a>
+        <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="loan-options.html">Loan Options</a>
+    <a href="locations.html">Locations</a>
+    <a href="guides.html">Guides</a>
+    <span class="mm-group">Tools</span>
+    <a class="mm-sub" href="calculator.html">Mortgage Calculator</a>
+    <a class="mm-sub" href="rent-vs-buy.html">Rent vs. Buy</a>
+    <a class="mm-sub" href="affordability.html">Affordability Calculator</a>
+    <a class="mm-sub" href="home-value.html">Home Value Estimator</a>
+    <a class="mm-sub" href="second-opinion.html">Second Opinion</a>
+    <a class="mm-sub" href="roadmap.html">Mortgage Roadmap</a>
+    <a class="mm-sub" href="realtor-partners.html">Realtors</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener">Get Started</a>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ============ CITY HERO ============ -->
+<!-- PHOTO: drop a file named naples-hero.jpg into this folder to fill the hero. -->
+<div class="city-hero" style="background-image:url('naples-hero.jpg')">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.82) 0%,rgba(10,10,10,.44) 55%,rgba(10,10,10,.22) 100%)"></div>
+  <div class="city-hero-inner" style="position:relative;z-index:1">
+    <div class="crumb"><a href="locations.html" style="color:rgba(255,255,255,.65)">Locations</a> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Florida</span> <span style="color:rgba(255,255,255,.4)">&rsaquo;</span> <span style="color:rgba(255,255,255,.65)">Naples</span></div>
+    <span class="eyebrow light">Jumbo Mortgage Broker in Naples, FL</span>
+    <h1>Naples home loans, <mark>done right</mark>.</h1>
+    <p class="lead-light">Jumbo financing shopped across 45 lenders for one of the wealthiest zip codes in America. Because smart money still finances.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      <a href="sms:+17704011759" class="btn btn-ghost-light">Call or Text (770) 401-1759</a>
+    </div>
+  </div>
+</div>
+<!-- ============ ABOUT THIS MARKET ============ -->
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Naples, FL</span>
+      <h2>Buying or refinancing in Naples?</h2>
+    </div>
+    <div class="city-copy reveal">
+      <p>Naples is the premier luxury market on Florida's Gulf Coast, with a median sale price around $1.3 million in the city and neighborhoods that run far beyond it. Port Royal, Aqualane Shores, and the beachfront estates rank among the most valuable residential real estate in the country, while Old Naples pairs walkable charm with Fifth Avenue South's restaurants and galleries. The buyer profile is distinctive: successful executives and business owners, retirees consolidating wealth built elsewhere, and families establishing a Florida base for tax and lifestyle reasons. Many can pay cash. The interesting question, and the one I help clients answer, is whether they should.</p>
+      <p>Financing at Naples price points is a strategic decision, not just a necessity. Buyers who could write a check often choose a mortgage to keep capital invested, preserve liquidity, or manage the timing of asset sales, and their advisors frequently agree. Nearly everything here is jumbo territory, well above the 2026 conforming limit of $832,750, and at seven figure loan sizes the differences between lenders on rate, reserve requirements, and income treatment translate into serious money. As an independent broker with access to 45 wholesale lenders, I shop that market rather than presenting one private bank's answer, and I structure applications around complex financial pictures: business income, investment income, retirement distributions, and asset based qualification for buyers whose wealth outruns their taxable income.</p>
+      <p>Golf and club communities are a Naples signature, from Pelican Bay and Grey Oaks to the newer developments east of town, and they add financing details worth knowing early. Association budgets, reserves, and insurance get reviewed by lenders on condo purchases, and buildings or associations that fall short need specialty programs. Club membership structures and fees also factor into qualification. I vet the community's financing profile before you go under contract, and on coastal properties I confirm flood zone status early so insurance costs are in the picture from the start.</p>
+      <p>Second homes remain the classic Naples purchase, financeable with as little as 10 percent down at rates near primary pricing when the home is genuinely for your use. For buyers who intend rental income in season, DSCR loans qualify the property on what it earns. Self employed buyers, who make up much of this market, qualify through bank statement programs that reflect real cash flow rather than tax return income. And since most Naples buyers purchase from somewhere else, the entire process runs digitally until closing day.</p>
+      <div class="areas-row">
+        <strong>Areas I serve in &amp; around Naples</strong>
+        <span class="chip">Old Naples</span>
+        <span class="chip">Port Royal</span>
+        <span class="chip">Aqualane Shores</span>
+        <span class="chip">Pelican Bay</span>
+        <span class="chip">Park Shore</span>
+        <span class="chip">Grey Oaks</span>
+        <span class="chip">North Naples</span>
+        <span class="chip">Marco Island</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ LOAN OPTIONS ============ -->
+<section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap" style="text-align:center">
+    <div class="sec-head center reveal" style="margin-bottom:24px">
+      <span class="eyebrow">Loan Options</span>
+      <h2>Financing that fits Naples.</h2>
+    </div>
+    <p class="angle">Jumbo is the core of this market, shopped across 45 lenders instead of quoted by one private bank. Second home programs, condo and club community expertise, and bank statement loans for the business owners who built their way here.</p>
+    <div class="prog-chips"><a href="loan-options.html">Jumbo</a><a href="loan-options.html">Conventional</a><a href="loan-options.html">Bank Statement</a><a href="loan-options.html">DSCR Investor</a></div>
+    <a href="loan-options.html" class="btn btn-primary">See All Loan Options</a>
+  </div>
+</section>
+<!-- ============ LOCAL SNAPSHOT ============ -->
+<section style="background:#fffdf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal" style="margin-bottom:30px">
+      <span class="eyebrow">Local Snapshot</span>
+      <h2>Naples by the numbers.</h2>
+    </div>
+    <div class="snap-grid">
+      <div class="snap reveal">
+        <div class="snap-k">Median sale price</div>
+        <div class="snap-v accent">~$1.3M</div>
+        <div class="snap-sub">City of Naples &middot; as of mid-2026</div>
+      </div>
+      <div class="snap reveal">
+        <div class="snap-k">2026 conforming limit</div>
+        <div class="snap-v">$832,750</div>
+        <div class="snap-sub">Most Naples purchases are &ldquo;jumbo&rdquo; &middot; FHFA</div>
+      </div>
+      <div class="snap reveal">
+        <div class="snap-k">Region</div>
+        <div class="snap-v" style="font-size:1.5rem">Southwest Florida</div>
+        <div class="snap-sub">Luxury &middot; Jumbo &middot; Second home</div>
+      </div>
+    </div>
+    <p class="snap-disc">Market figures are approximate and change over time. The $832,750 figure is the 2026 baseline conforming loan limit for one-unit homes (Collier County is a standard-limit county; source: FHFA). This is general information, not a rate quote or loan commitment.</p>
+  </div>
+</section>
+<!-- ============ FAQ ============ -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Naples mortgage FAQs.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq">
+        <button>I could pay cash for a Naples home. Why would I finance? <span class="plus">+</span></button>
+        <div class="ans"><p>Many Naples buyers finance by choice rather than necessity: to keep capital invested, preserve liquidity, or avoid poorly timed asset sales. It is a conversation worth having alongside your financial advisor, and I am happy to run the numbers both ways so the decision is made on math rather than habit.</p></div>
+      </div>
+      <div class="faq">
+        <button>My wealth is in assets, not income. Can I still qualify? <span class="plus">+</span></button>
+        <div class="ans"><p>Often yes. Asset based qualification programs use your investment portfolio and liquid assets to establish qualifying income, which fits retirees and buyers whose taxable income understates their financial position. Bank statement programs serve business owners the same way. This is exactly the kind of file where an independent broker with 45 lenders outperforms a single bank.</p></div>
+      </div>
+      <div class="faq">
+        <button>How do jumbo loans work for Naples price points? <span class="plus">+</span></button>
+        <div class="ans"><p>Nearly everything in Naples trades above the 2026 conforming limit of $832,750, so jumbo is the standard here. Lenders differ meaningfully on rates, reserve requirements, and how they treat complex income, and at seven figure loan sizes those differences are worth real money. I shop the jumbo market across 45 wholesale lenders and bring you the strongest structure.</p></div>
+      </div>
+      <div class="faq">
+        <button>Are there financing issues with golf and club communities? <span class="plus">+</span></button>
+        <div class="ans"><p>Sometimes. On condo purchases, lenders review the association's budget, reserves, and insurance, and associations that fall short need specialty programs. Club membership fees can also factor into qualification. I vet the community's financing profile before you go under contract so nothing surfaces late in the transaction.</p></div>
+      </div>
+      <div class="faq">
+        <button>Can you handle my Naples purchase remotely? <span class="plus">+</span></button>
+        <div class="ans"><p>Yes. Most Naples buyers purchase from out of state, and the entire process runs digitally from pre approval through closing prep. Call or text (770) 401-1759 and we can discuss the right structure before you start shopping.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ FINAL CTA ============ -->
+<section id="start" style="border-top:1px solid var(--line)">
+  <div class="wrap" style="text-align:center">
+    <div class="reveal" style="max-width:40em;margin:0 auto">
+      <span class="eyebrow">Get Started</span>
+      <h2 style="margin:12px 0 14px">Ready to buy in Naples?</h2>
+      <p style="color:var(--muted);margin-bottom:26px">Let's structure your Naples purchase properly. Jumbo, second home, or asset based. A real pre approval from a broker who shops 45 lenders for you.</p>
+      <a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener" class="btn btn-primary">Get Pre-Approved</a>
+      <p style="margin-top:24px;font-size:.95rem;color:var(--muted)">&#128222; <a href="tel:+17704011759" style="color:var(--brass);font-weight:600">(770) 401-1759</a> &nbsp;&middot;&nbsp; &#9993; <a href="mailto:gpotz@affinityhomelending.com" style="color:var(--brass);font-weight:600">gpotz@affinityhomelending.com</a></p>
+    </div>
+  </div>
+</section>
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <img src="affinity-logo.png" alt="Affinity Home Lending" class="brand-mark">
+          <span><span class="brand-name">Garrett Potz</span><br><span class="brand-sub">AFFINITY HOME LENDING</span></span>
+        </div>
+        <p>Helping self-employed borrowers, business owners, and families across Woodstock, Cherokee County, and metro Atlanta find the right mortgage — purchase or refinance.</p>
+        <div class="foot-nmls">Garrett Potz NMLS #631592 · Affinity Home Lending NMLS #1181151 · Georgia Residential Mortgage Licensee #42129</div>
+        <div class="eho">
+          <span class="ehologo">⌂</span>
+          <span>Equal Housing Lender. This is not a commitment to lend. All loans subject to credit approval.</span>
+        </div>
+      </div>
+      <div>
+        <h5>Programs</h5>
+        <ul>
+          <li><a href="loan-options.html#purchase">Purchase</a></li>
+          <li><a href="loan-options.html#refinance">Refinance</a></li>
+          <li><a href="loan-options.html#self-employed">Bank Statement</a></li>
+          <li><a href="loan-options.html#self-employed">1099 Income</a></li>
+          <li><a href="loan-options.html#dscr">DSCR / Investor</a></li>
+          <li><a href="loan-options.html#self-employed">P&L-Only</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="index.html#process">How It Works</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="index.html#community">Community</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="realtor-partners.html">Realtors</a></li>
+          <li><a href="https://garrettpotz.my1003app.com/register" target="_blank" rel="noopener">Get Started</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="tel:+17704011759">(770) 401-1759</a></li>
+          <li><a href="mailto:gpotz@affinityhomelending.com">Email</a></li>
+          <li><a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener">NMLS Consumer Access</a></li>
+        </ul>
+        <div class="social-row">
+          <a href="https://www.facebook.com/garrettpotz" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.55c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a>
+          <a href="https://www.instagram.com/garrettpotz/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.linkedin.com/in/garrettpotz/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a href="https://www.youtube.com/@GarrettPotz" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <svg class="ehl-logo" viewBox="0 0 64 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Equal Housing Lender"><path d="M32 8 L58 30 L50 30 L50 56 L14 56 L14 30 L6 30 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><rect x="23" y="35" width="18" height="4.5" fill="currentColor"/><rect x="23" y="44" width="18" height="4.5" fill="currentColor"/><text x="32" y="69" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="8" font-weight="bold" fill="currentColor">EQUAL HOUSING</text><text x="32" y="80" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="8" font-weight="bold" fill="currentColor">LENDER</text></svg>
+      © 2026 Garrett Potz · Affinity Home Lending LLC · Garrett Potz NMLS #631592 · Company NMLS #1181151 · Georgia Residential Mortgage Licensee #42129 · Equal Housing Lender. Woodstock, GA.<br>
+      Rates and terms are subject to change without notice and depend on individual credit, income, and property factors. This site is for informational purposes and is not an offer to lend.<br>
+      <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+
+document.querySelectorAll('.faq button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const faq=btn.parentElement;
+    const ans=faq.querySelector('.ans');
+    const open=faq.classList.contains('open');
+    document.querySelectorAll('.faq').forEach(f=>{f.classList.remove('open');f.querySelector('.ans').style.maxHeight=null;});
+    if(!open){faq.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+});
+
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
