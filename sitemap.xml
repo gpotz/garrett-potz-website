@@ -403,14 +403,44 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.garrettpotz.com/guide-first-time-buyer.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.garrettpotz.com/guide-home-equity.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.garrettpotz.com/guide-investor.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.garrettpotz.com/guide-refinance.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.garrettpotz.com/guide-reverse-mortgage.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.garrettpotz.com/guide-self-employed.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.garrettpotz.com/guides.html</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
