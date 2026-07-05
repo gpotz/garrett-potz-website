@@ -209,6 +209,11 @@ section{padding:84px 0}
 .vcard h3{font-size:1.25rem;margin-bottom:10px}
 .vcard p{color:var(--muted);font-size:.96rem}
 @media(max-width:820px){.cards-3{grid-template-columns:1fr}}
+.cert-card{display:flex;align-items:center;gap:32px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:32px;max-width:760px;margin:0 auto;box-shadow:var(--shadow)}
+.cert-badge{width:120px;height:120px;object-fit:contain;flex-shrink:0}
+.cert-card h3{font-size:1.25rem;margin-bottom:10px}
+.cert-card p{color:var(--muted);font-size:.96rem}
+@media(max-width:600px){.cert-card{flex-direction:column;text-align:center}}
 
 /* ---------- loan options grid ---------- */
 .loan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -463,6 +468,20 @@ footer ul a:hover{color:var(--brass-soft)}
         <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <h3>Plain English, no surprises</h3>
         <p>I explain every option and every cost in language that actually makes sense. I'll tell you the truth even when it isn't what you were hoping to hear.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow">Certifications</span><h2>Specialized training you can verify.</h2></div>
+    <div class="cert-card reveal">
+      <img src="cma_shield_2026.png" alt="Certified Mortgage Advisor CMA badge" class="cert-badge">
+      <div>
+        <h3>Certified Mortgage Advisor (CMA)</h3>
+        <p>The CMA designation means I've completed advanced training in mortgage planning, not just finding a loan, but understanding how it fits your bigger financial picture. That training covers how to break down complex income structures, compare total cost across different loan programs, and make sure the mortgage you choose actually works for how you live. It's the difference between someone who processes paperwork and someone who helps you make a smart decision. For me, it's also part of how I stay sharp on the tools available to self employed borrowers and business owners, the clients I specialize in serving.</p>
       </div>
     </div>
   </div>
