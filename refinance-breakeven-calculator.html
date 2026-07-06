@@ -368,8 +368,9 @@ footer ul a:hover{color:var(--brass-soft)}
         </div>
 
         <div class="calc-field">
-          <label>New loan term</label>
-          <div class="term-toggle" id="termToggle">
+          <label for="newTermInput">New loan term <span class="hint">years, 10-30</span></label>
+          <input id="newTermInput" type="number" value="30" min="10" max="30" step="1">
+          <div class="term-toggle" id="termToggle" style="margin-top:10px">
             <button type="button" data-term="30" class="active">30 yr</button>
             <button type="button" data-term="20">20 yr</button>
             <button type="button" data-term="15">15 yr</button>
@@ -457,8 +458,8 @@ footer ul a:hover{color:var(--brass-soft)}
 (function(){
   var balance=document.getElementById('balance'), curRate=document.getElementById('curRate'),
       curYears=document.getElementById('curYears'), newRate=document.getElementById('newRate'),
-      costs=document.getElementById('costs'), rollIn=document.getElementById('rollIn');
-  var newTerm=30;
+      costs=document.getElementById('costs'), rollIn=document.getElementById('rollIn'),
+      newTermInput=document.getElementById('newTermInput');
 
   function fmt(n){ if(!isFinite(n))n=0; return '$'+Math.round(n).toLocaleString('en-US'); }
 
@@ -549,7 +550,7 @@ footer ul a:hover{color:var(--brass-soft)}
 
   function calc(){
     var B=+balance.value||0, cr=+curRate.value||0, cy=+curYears.value||1;
-    var nr=+newRate.value||0, ny=newTerm, c=+costs.value||0;
+    var nr=+newRate.value||0, ny=Math.min(30,Math.max(10,+newTermInput.value||30)), c=+costs.value||0;
     var newPrincipal = rollIn.checked ? B+c : B;
 
     var oldPayment=monthlyPayment(B,cr,cy);
@@ -612,10 +613,17 @@ footer ul a:hover{color:var(--brass-soft)}
     el.addEventListener('input', calc);
   });
   rollIn.addEventListener('change', calc);
+  function syncToggleActive(){
+    var v=+newTermInput.value;
+    document.querySelectorAll('#termToggle button').forEach(function(x){
+      x.classList.toggle('active', +x.getAttribute('data-term')===v);
+    });
+  }
+  newTermInput.addEventListener('input', function(){ syncToggleActive(); calc(); });
   document.querySelectorAll('#termToggle button').forEach(function(b){
     b.addEventListener('click', function(){
-      document.querySelectorAll('#termToggle button').forEach(function(x){x.classList.remove('active');});
-      b.classList.add('active'); newTerm=+b.getAttribute('data-term'); calc();
+      newTermInput.value=b.getAttribute('data-term');
+      syncToggleActive(); calc();
     });
   });
 
