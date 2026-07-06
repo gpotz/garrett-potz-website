@@ -230,16 +230,24 @@ footer ul a:hover{color:var(--brass-soft)}
 .letterhead .lh-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.3rem;color:var(--pine)}
 .letterhead .lh-title{font-size:.88rem;color:var(--muted)}
 .letterhead .lh-contact{font-size:.8rem;color:var(--muted);margin-top:4px;font-family:'Spline Sans Mono',monospace}
-.print-summary{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:26px;font-size:.94rem;line-height:1.7}
-.print-summary strong{color:var(--pine)}
+.print-summary{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin-bottom:26px}
 .print-title{margin-bottom:6px}
 .print-generated{font-size:.8rem;color:var(--muted);margin-bottom:24px}
+.ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.ps-label{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:10px}
+.ps-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.ps-row:last-child{border-bottom:0}
+.ps-row span:first-child{color:var(--muted)}
+.ps-row span:last-child{font-weight:600;color:var(--ink)}
+.ps-note{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted);text-align:center}
+@media(max-width:560px){.ps-grid{grid-template-columns:1fr}}
 @media print{
   .no-print{display:none !important}
   .print-only{display:block}
   header,.mobile-menu,#start,footer,.hero{display:none !important}
   body{background:#fff}
   .calc-grid{grid-template-columns:1fr;gap:22px}
+  .calc-inputs{display:none}
   .calc-result{position:static;background:#fff;color:var(--ink);border:1.5px solid var(--pine)}
   .calc-result .rlabel{color:var(--brass)}
   .calc-result .permo{color:var(--muted)}
@@ -647,8 +655,21 @@ footer ul a:hover{color:var(--brass-soft)}
 
     document.getElementById('printDate').textContent='Prepared '+new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
     document.getElementById('printSummary').innerHTML=
-      '<strong>Current loan:</strong> '+fmt(B)+' balance at '+cr+'% with '+cy.toFixed(1)+' years remaining ('+fmt(oldPayment)+'/mo)<br>'+
-      '<strong>Proposed refinance:</strong> '+fmt(newPrincipal)+' at '+nr+'% over '+ny+' years ('+fmt(newPayment)+'/mo), payoff of '+fmt(P0)+' plus '+fmt(c)+' closing costs'+(rollIn.checked?' rolled into the loan':' paid at closing');
+      '<div class="ps-grid">'+
+        '<div><div class="ps-label">Current Loan</div>'+
+          '<div class="ps-row"><span>Balance</span><span>'+fmt(B)+'</span></div>'+
+          '<div class="ps-row"><span>Rate</span><span>'+cr+'%</span></div>'+
+          '<div class="ps-row"><span>Term Remaining</span><span>'+cy.toFixed(1)+' yrs</span></div>'+
+          '<div class="ps-row"><span>Payment (P&amp;I)</span><span>'+fmt(oldPayment)+'</span></div>'+
+        '</div>'+
+        '<div><div class="ps-label">Proposed Refinance</div>'+
+          '<div class="ps-row"><span>Loan Amount</span><span>'+fmt(newPrincipal)+'</span></div>'+
+          '<div class="ps-row"><span>Rate</span><span>'+nr+'%</span></div>'+
+          '<div class="ps-row"><span>Term</span><span>'+ny+' yrs</span></div>'+
+          '<div class="ps-row"><span>Payment (P&amp;I)</span><span>'+fmt(newPayment)+'</span></div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="ps-note">Payoff of '+fmt(P0)+' plus '+fmt(c)+' closing costs'+(rollIn.checked?' rolled into the new loan':' paid at closing')+'</div>';
   }
 
   [balance,payoff,curRate,curYears,curPayment,newRate,costs].forEach(function(el){
