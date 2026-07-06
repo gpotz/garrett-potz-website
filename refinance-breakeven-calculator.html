@@ -251,29 +251,40 @@ footer ul a:hover{color:var(--brass-soft)}
 .ps-note{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted);text-align:center}
 @media(max-width:560px){.ps-grid{grid-template-columns:1fr}}
 @media print{
+  @page{margin:0.4in}
   .no-print{display:none !important}
   .print-only{display:block}
   header,.mobile-menu,#start,footer,.hero{display:none !important}
   body{background:#fff}
-  .calc-grid{grid-template-columns:1fr;gap:22px}
+  .calc-grid{grid-template-columns:1fr;gap:14px}
   .calc-inputs{display:none}
-  .calc-result{position:static;background:#fff;color:var(--ink);border:1.5px solid var(--pine)}
+  .calc-result{position:static;background:#fff;color:var(--ink);border:1.5px solid var(--pine);padding:20px}
   .calc-result .rlabel{color:var(--brass)}
   .calc-result .permo{color:var(--muted)}
   .brow .k{color:var(--muted)}
   .breakdown,.calc-meta,.brow,.brow.total{border-color:var(--line)}
   .calc-meta strong{color:var(--ink)}
-  section{padding:20px 0}
+  section{padding:6px 0}
+  .letterhead{padding-bottom:14px;margin-bottom:14px}
+  .print-summary{padding:14px 18px;margin-bottom:14px}
+  .print-generated{margin-bottom:12px}
+  .compare-wrap{margin-top:14px}
+  .chart-card{padding:16px;margin-top:14px}
+  .chart-card .note{margin-bottom:10px}
+  .mini-charts{margin-top:14px;gap:14px}
+  .mc-bar-wrap{height:90px;margin-bottom:8px}
+  .calc-disc{margin-top:12px}
 
-  .letterhead,.print-summary,.calc-result,.compare-table,.chart-card,.mini-charts,
-  .compare-table tr,.na-note{
+  /* Force a clean, predictable 2 page split instead of letting the
+     browser auto flow and strand a mostly empty page: page 1 is the
+     letterhead, scenario summary, and headline result; page 2 is the
+     comparison table and charts. */
+  .compare-wrap{break-before:page;page-break-before:always}
+
+  .letterhead,.compare-table tr,.mc-bar-wrap,.na-note{
     break-inside:avoid;
     page-break-inside:avoid;
   }
-  .compare-wrap,.calc-result,.chart-card,.mini-charts{
-    break-before:auto;
-  }
-  .calc-disc{break-before:avoid}
 }
 </style>
 <style>.hero.tcenter .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}.hero.tcenter .hero-cta,.hero.tcenter .trust-row,.hero.tcenter .chips{justify-content:center}</style></head>
