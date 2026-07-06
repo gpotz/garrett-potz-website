@@ -264,6 +264,16 @@ footer ul a:hover{color:var(--brass-soft)}
   .breakdown,.calc-meta,.brow,.brow.total{border-color:var(--line)}
   .calc-meta strong{color:var(--ink)}
   section{padding:20px 0}
+
+  .letterhead,.print-summary,.calc-result,.compare-table,.chart-card,.mini-charts,
+  .compare-table tr,.na-note{
+    break-inside:avoid;
+    page-break-inside:avoid;
+  }
+  .compare-wrap,.calc-result,.chart-card,.mini-charts{
+    break-before:auto;
+  }
+  .calc-disc{break-before:avoid}
 }
 </style>
 <style>.hero.tcenter .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}.hero.tcenter .hero-cta,.hero.tcenter .trust-row,.hero.tcenter .chips{justify-content:center}</style></head>
