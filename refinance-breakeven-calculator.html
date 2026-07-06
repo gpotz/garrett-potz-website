@@ -347,8 +347,13 @@ footer ul a:hover{color:var(--brass-soft)}
       <!-- INPUTS -->
       <div class="calc-inputs reveal">
         <div class="calc-field">
-          <label for="balance">Current loan balance</label>
+          <label for="balance">Current loan balance <span class="hint">from statement</span></label>
           <div class="input-money"><span class="pre">$</span><input id="balance" type="number" value="380000" min="0" step="1000"></div>
+        </div>
+
+        <div class="calc-field">
+          <label for="payoff">Current payoff amount <span class="hint">size of new loan</span></label>
+          <div class="input-money"><span class="pre">$</span><input id="payoff" type="number" value="380000" min="0" step="1000"></div>
         </div>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
@@ -357,9 +362,15 @@ footer ul a:hover{color:var(--brass-soft)}
             <input id="curRate" type="number" value="7.25" min="0" max="25" step="0.01">
           </div>
           <div class="calc-field">
-            <label for="curYears">Years left <span class="hint">on current loan</span></label>
-            <input id="curYears" type="number" value="28" min="1" max="40" step="1">
+            <label for="curYears">Years left <span class="hint">decimals ok</span></label>
+            <input id="curYears" type="number" value="28" min="0.5" max="40" step="0.1">
           </div>
+        </div>
+
+        <div class="calc-field">
+          <label for="curPayment">Current P&amp;I payment <span class="hint">optional, from statement</span></label>
+          <div class="input-money"><span class="pre">$</span><input id="curPayment" type="number" value="" min="0" step="1" placeholder="Leave blank to use years left instead"></div>
+          <div id="derivedNote" style="font-size:.78rem;color:var(--muted);margin-top:8px"></div>
         </div>
 
         <div class="calc-field">
@@ -456,8 +467,9 @@ footer ul a:hover{color:var(--brass-soft)}
 
 <script>
 (function(){
-  var balance=document.getElementById('balance'), curRate=document.getElementById('curRate'),
-      curYears=document.getElementById('curYears'), newRate=document.getElementById('newRate'),
+  var balance=document.getElementById('balance'), payoff=document.getElementById('payoff'),
+      curRate=document.getElementById('curRate'), curYears=document.getElementById('curYears'),
+      curPayment=document.getElementById('curPayment'), newRate=document.getElementById('newRate'),
       costs=document.getElementById('costs'), rollIn=document.getElementById('rollIn'),
       newTermInput=document.getElementById('newTermInput');
 
@@ -468,6 +480,18 @@ footer ul a:hover{color:var(--brass-soft)}
     if(n<=0) return 0;
     if(r<=0) return principal/n;
     return principal*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  }
+
+  function solveRemainingYears(principal, annualRatePct, payment){
+    var r=annualRatePct/100/12;
+    if(principal<=0||payment<=0) return null;
+    if(r<=0) return payment>0 ? principal/payment/12 : null;
+    var ratio=payment/principal;
+    if(ratio<=r) return null;
+    var x=ratio/(ratio-r);
+    var n=Math.log(x)/Math.log(1+r);
+    if(!isFinite(n)||n<=0) return null;
+    return n/12;
   }
 
   function cumulativeInterestSchedule(principal, annualRatePct, years){
@@ -549,11 +573,29 @@ footer ul a:hover{color:var(--brass-soft)}
   }
 
   function calc(){
-    var B=+balance.value||0, cr=+curRate.value||0, cy=+curYears.value||1;
+    var B=+balance.value||0, P0=+payoff.value||B, cr=+curRate.value||0;
     var nr=+newRate.value||0, ny=Math.min(30,Math.max(10,+newTermInput.value||30)), c=+costs.value||0;
-    var newPrincipal = rollIn.checked ? B+c : B;
+    var newPrincipal = rollIn.checked ? P0+c : P0;
 
-    var oldPayment=monthlyPayment(B,cr,cy);
+    var cy, oldPayment;
+    var cpVal=+curPayment.value||0;
+    var derivedNote=document.getElementById('derivedNote');
+    if(cpVal>0){
+      var solved=solveRemainingYears(B,cr,cpVal);
+      if(solved){
+        cy=solved; oldPayment=cpVal;
+        derivedNote.style.color='var(--muted)';
+        derivedNote.textContent='Works out to about '+cy.toFixed(1)+' years remaining at this rate and balance.';
+      } else {
+        cy=+curYears.value||1; oldPayment=monthlyPayment(B,cr,cy);
+        derivedNote.style.color='var(--brass)';
+        derivedNote.textContent='That payment does not cover the interest on this balance and rate, so years left is being used instead.';
+      }
+    } else {
+      cy=+curYears.value||1; oldPayment=monthlyPayment(B,cr,cy);
+      derivedNote.textContent='';
+    }
+
     var newPayment=monthlyPayment(newPrincipal,nr,ny);
 
     var oldSchedule=cumulativeInterestSchedule(B,cr,cy);
@@ -605,11 +647,11 @@ footer ul a:hover{color:var(--brass-soft)}
 
     document.getElementById('printDate').textContent='Prepared '+new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
     document.getElementById('printSummary').innerHTML=
-      '<strong>Current loan:</strong> '+fmt(B)+' balance at '+cr+'% with '+cy+' years remaining ('+fmt(oldPayment)+'/mo)<br>'+
-      '<strong>Proposed refinance:</strong> '+fmt(newPrincipal)+' at '+nr+'% over '+ny+' years ('+fmt(newPayment)+'/mo), '+fmt(c)+' closing costs'+(rollIn.checked?' rolled into the loan':' paid at closing');
+      '<strong>Current loan:</strong> '+fmt(B)+' balance at '+cr+'% with '+cy.toFixed(1)+' years remaining ('+fmt(oldPayment)+'/mo)<br>'+
+      '<strong>Proposed refinance:</strong> '+fmt(newPrincipal)+' at '+nr+'% over '+ny+' years ('+fmt(newPayment)+'/mo), payoff of '+fmt(P0)+' plus '+fmt(c)+' closing costs'+(rollIn.checked?' rolled into the loan':' paid at closing');
   }
 
-  [balance,curRate,curYears,newRate,costs].forEach(function(el){
+  [balance,payoff,curRate,curYears,curPayment,newRate,costs].forEach(function(el){
     el.addEventListener('input', calc);
   });
   rollIn.addEventListener('change', calc);
