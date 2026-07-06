@@ -222,6 +222,15 @@ footer ul a:hover{color:var(--brass-soft)}
 .chart-legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:12px;font-size:.82rem;color:var(--muted)}
 .chart-legend span{display:inline-flex;align-items:center;gap:7px}
 .chart-legend i{width:14px;height:4px;border-radius:2px;display:inline-block}
+.mini-charts{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+@media(max-width:700px){.mini-charts{grid-template-columns:1fr}}
+.chart-card.mini{text-align:center;margin-top:0}
+.chart-card.mini h3{font-size:1.02rem;margin-bottom:4px}
+.chart-card.mini .note{font-size:.84rem;margin-bottom:20px}
+.mc-bar-wrap{height:140px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:14px}
+.mc-bar{width:64px;border-radius:8px 8px 0 0;background:var(--brass);transition:height .3s ease;min-height:4px}
+.mc-value{font-family:'Fraunces',serif;font-weight:700;font-size:1.7rem;color:var(--pine)}
+.mc-value.neg{color:var(--muted)}
 .na-note{background:#fbf7f7;border-left:3px solid var(--brass);border-radius:0 10px 10px 0;padding:14px 18px;margin-top:16px;font-size:.92rem;color:var(--ink)}
 
 .print-only{display:none}
@@ -454,6 +463,21 @@ footer ul a:hover{color:var(--brass-soft)}
           <span><i style="background:#a1a1a1"></i>Closing costs</span>
         </div>
       </div>
+
+      <div class="mini-charts">
+        <div class="chart-card mini">
+          <h3>Savings at 5 Years</h3>
+          <p class="note">Net savings if you only keep this loan 5 more years</p>
+          <div class="mc-bar-wrap"><div class="mc-bar" id="mcBar5"></div></div>
+          <div class="mc-value" id="mcValue5">$0</div>
+        </div>
+        <div class="chart-card mini">
+          <h3>Savings Over Life of Loan</h3>
+          <p class="note">Net savings if you keep the new loan to term</p>
+          <div class="mc-bar-wrap"><div class="mc-bar" id="mcBarLife"></div></div>
+          <div class="mc-value" id="mcValueLife">$0</div>
+        </div>
+      </div>
     </div>
 
     <p class="calc-disc">This is an estimate for planning only, based on the numbers you enter and standard amortization math. It does not account for taxes, insurance, PMI changes, opportunity cost of cash paid at closing, or the possibility of moving or refinancing again before break even. Actual figures depend on your loan estimate and closing disclosure. For real numbers based on today's rates and your situation, <a href="contact.html">let's talk</a>.</p>
@@ -652,6 +676,18 @@ footer ul a:hover{color:var(--brass-soft)}
     }
 
     document.getElementById('chartHolder').innerHTML=buildChart(oldSchedule,newSchedule,c,trueBreakevenMonth);
+
+    var netSavings5yr=valueAt(oldSchedule,60)-valueAt(newSchedule,60)-c;
+    var maxScale=Math.max(lifetimeSavings,netSavings5yr,1);
+    function setMiniBar(barEl,valueEl,val){
+      var pct = val>0 ? Math.max(4,(val/maxScale*100)) : 2;
+      barEl.style.height=pct+'%';
+      barEl.style.background = val>=0 ? 'var(--brass)' : '#c9c9c9';
+      valueEl.textContent=(val<0?'-':'')+fmt(Math.abs(val));
+      valueEl.classList.toggle('neg', val<0);
+    }
+    setMiniBar(document.getElementById('mcBar5'), document.getElementById('mcValue5'), netSavings5yr);
+    setMiniBar(document.getElementById('mcBarLife'), document.getElementById('mcValueLife'), lifetimeSavings);
 
     document.getElementById('printDate').textContent='Prepared '+new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
     document.getElementById('printSummary').innerHTML=
