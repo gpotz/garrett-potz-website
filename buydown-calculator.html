@@ -72,6 +72,7 @@ nav{display:flex;align-items:center;justify-content:space-between;min-height:84p
 .nav-links > a{color:var(--muted);transition:color .15s;white-space:nowrap}
 .nav-links > a:hover{color:var(--pine)}
 .dropdown{position:relative}
+.dropdown::after{content:"";position:absolute;top:100%;left:0;right:0;height:24px}
 .dropdown > button{display:inline-flex;align-items:center;gap:5px;background:none;border:0;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:500;color:var(--muted);transition:color .15s;}
 .dropdown > button:hover,.dropdown:focus-within > button{color:var(--pine)}
 .dropdown > button .caret{font-size:.62rem;transition:transform .2s}
